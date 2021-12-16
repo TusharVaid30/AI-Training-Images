@@ -1,37 +1,55 @@
-using System;
-using System.IO;
-using UnityEditor;
+using System.Globalization;
 using UnityEngine;
 
 public class GetPixelPosition : MonoBehaviour
 {
-    public int time;
-    public int numberOfFrames;
+    public int framesDone;
     
-    [SerializeField] private int screenWidth;
-    [SerializeField] private int screenHeight;
-    [SerializeField] private Animator camera;
+    [SerializeField] private Animator cameraPosition;
+    [SerializeField] private new GameObject camera;
+    [SerializeField] private Data data;
+    [SerializeField] private CoordsPerFrame[] coordsPerFrame;
+    
+    private const float TIME_TAKEN_PER_FRAME = 1f;
+    private int numberOfFrames = 0;
+    private readonly int stateNameHash = Animator.StringToHash("Camera Movement");
 
-    private float timeTakenPerFrame = 1 / 60f;
-    
-    private void Update()
+    private void Start()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            camera.Play("Camera Movement", -1, 0f);
-            InvokeRepeating(nameof(Run), timeTakenPerFrame, timeTakenPerFrame);
-        }
+        numberOfFrames = data.numberOfFrames;
     }
 
+    private void Update()
+    {
+        if (!Input.GetMouseButtonDown(0)) return;
+        cameraPosition.Play(stateNameHash, -1, 0f);
+        SetCamPosition();
+            
+        InvokeRepeating(nameof(Run), TIME_TAKEN_PER_FRAME, TIME_TAKEN_PER_FRAME);
+    }
+
+    private void SetCamPosition()
+    {
+        var camTransform = cameraPosition.transform;
+        camera.transform.position = camTransform.position;
+        camera.transform.rotation = camTransform.rotation;
+    }
+    
     private void Run()
     {
-        time++;
+        framesDone++;
+        Debug.Log("Capturing Frame " + framesDone);
 
-        if (time < numberOfFrames)
+        if (framesDone >= numberOfFrames) return;
+        SetCamPosition();
+
+        if (Camera.main is null) return;
+        foreach (var coords in coordsPerFrame)
         {
-            Vector3 screenPosition = Camera.main.WorldToScreenPoint(transform.position);
-            
-            GetComponent<CoordsPerFrame>().coords.Add((screenWidth - screenPosition.x) + ", " + (screenHeight - (int) screenPosition.y));
+            var screenPosition = Camera.main.WorldToScreenPoint(coords.transform.position);
+
+            coords.coordsX.Add((screenPosition.x).ToString(CultureInfo.InvariantCulture));
+            coords.coordsY.Add((1080 - screenPosition.y).ToString(CultureInfo.InvariantCulture));
         }
     }
 }
