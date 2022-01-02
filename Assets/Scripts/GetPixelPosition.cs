@@ -1,5 +1,6 @@
 using System.Globalization;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GetPixelPosition : MonoBehaviour
 {
@@ -8,10 +9,11 @@ public class GetPixelPosition : MonoBehaviour
     [SerializeField] private Animator cameraPosition;
     [SerializeField] private new GameObject camera;
     [SerializeField] private Data data;
+    [SerializeField] private Text debugText;
     [SerializeField] private CoordsPerFrame[] coordsPerFrame;
-    
+
     private const float TIME_TAKEN_PER_FRAME = 1f;
-    private int numberOfFrames = 0;
+    private int numberOfFrames;
     private readonly int stateNameHash = Animator.StringToHash("Camera Movement");
 
     private void Start()
@@ -34,13 +36,24 @@ public class GetPixelPosition : MonoBehaviour
         camera.transform.position = camTransform.position;
         camera.transform.rotation = camTransform.rotation;
     }
+
+    private void DebugStatus(string info)
+    {
+        Debug.Log(info);
+        debugText.text = info;
+    }
     
     private void Run()
     {
-        framesDone++;
-        Debug.Log("Capturing Frame " + framesDone);
+        if (framesDone > numberOfFrames)
+        {
+            DebugStatus("Writing Data to File");
+            return;
+        }
 
-        if (framesDone >= numberOfFrames) return;
+        framesDone++;
+        
+        DebugStatus("Capturing Frame " + framesDone);
         SetCamPosition();
 
         if (Camera.main is null) return;
