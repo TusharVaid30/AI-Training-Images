@@ -1,11 +1,29 @@
 fileFormatVersion: 2
-guid: 6361f0a5db097ee45b42705f0f2d1262
+guid: 85038944f5bcb80488f5724b28de5d36
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable:
   - first:
-      74: -1412300944855413334
-    second: Camera|Action
+      74: 6807805789728624920
+    second: Camera|Camera.001|Camera|Action|Camera|Action
+  - first:
+      74: 3167411213364349662
+    second: Camera|Camera.001|Camera|CameraAction|Camera|CameraAction
+  - first:
+      74: -8449156482455619122
+    second: Camera|Camera.001|Camera|Shader NodetreeAction|Camera|Shader NodetreeA
+  - first:
+      74: -5089131165289848331
+    second: Camera|Camera.002|Camera|Action|Camera|Action
+  - first:
+      74: -7636255480436137469
+    second: Camera|Camera.002|Camera|CameraAction|Camera|CameraAction
+  - first:
+      74: -6034963441627615501
+    second: Camera|Camera.002|Camera|Shader NodetreeAction|Camera|Shader NodetreeA
+  - first:
+      74: 8440248360967096626
+    second: Camera|CameraAction
   externalObjects: {}
   materials:
     materialImportMode: 2
