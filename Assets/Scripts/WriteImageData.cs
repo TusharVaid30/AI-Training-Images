@@ -28,22 +28,25 @@ public class WriteImageData : MonoBehaviour
     private void SetupData()
     {
         WriteString("{");
+        WriteString("     \'data\':" + " [");
         for (var i = 0; i <= data.numberOfFrames - 1; i++)
         {
-            WriteString("     \"Frame " + (i + 1) + "\":" + " [");
+            WriteString("     [");
+            WriteString("     {\'img_name\'   :    " + "\'"+ (i + 1) + ".png\', \'damage_type\'  :   \'crack\', \'points\':   ");
 
             for (var j = 0; j < coordsPerFrame.Length; j++)
             {
                 WriteString("          [");
-                WriteString("             " + coordsPerFrame[j].coordsX[i] + ",");
-                WriteString("             " + coordsPerFrame[j].coordsY[i]);
+                WriteString("             [" + coordsPerFrame[j].coordsX[i] + "],");
+                WriteString("             [" + coordsPerFrame[j].coordsY[i] + "]");
                 WriteString(j == coordsPerFrame.Length - 1 ? "          ]" : "          ],");
             }
 
-            WriteString(i == data.numberOfFrames - 2 ? "     ]" : "     ],");
+            WriteString("      }");
+            WriteString(i == data.numberOfFrames - 1 ? "     ]" : "     ],");
         }
 
-        WriteString("}");
+        WriteString("]}");
 
         DebugInfo("Data Written");
 
