@@ -1,0 +1,288 @@
+fileFormatVersion: 2
+guid: 5a663c40fb80df5439669046976b1a82
+ModelImporter:
+  serializedVersion: 21202
+  internalIDToNameTable:
+  - first:
+      74: 2894552987051754608
+    second: Crack2.007|bump_rea01_001.001Action
+  - first:
+      74: -931029786754687884
+    second: Crack2.007|bump_rea01_001.001Action.001
+  - first:
+      74: 5911908235864968086
+    second: Crack2.007|bump_rea01_001Action
+  - first:
+      74: -470860422539028780
+    second: Crack2.007|bump_rea01_001Action.001
+  - first:
+      74: -811214405608170336
+    second: Crack2.007|Camera.001|Camera|Action|Camera|Action
+  - first:
+      74: -8629587754780615725
+    second: Crack2.007|Camera.001|Camera|CameraAction|Camera|CameraAction
+  - first:
+      74: -1219579423778219193
+    second: Crack2.007|Camera.001|Camera|Shader NodetreeAction|Camera|Shader NodetreeA
+  - first:
+      74: -7002035032295173849
+    second: Crack2.007|Camera.002|Camera|Action|Camera|Action
+  - first:
+      74: 3186719414646043265
+    second: Crack2.007|Camera.002|Camera|CameraAction|Camera|CameraAction
+  - first:
+      74: -7409732993540448765
+    second: Crack2.007|Camera.002|Camera|Shader NodetreeAction|Camera|Shader NodetreeA
+  - first:
+      74: -892633470105698891
+    second: Crack2.007|CameraAction
+  - first:
+      74: 3838626540579464458
+    second: Crack2.007|Crack1Action
+  - first:
+      74: 8536070509995880310
+    second: Crack2.007|Crack2.001Action
+  - first:
+      74: 6769392810106283257
+    second: Crack2.007|Crack2.001Action.001
+  - first:
+      74: 7352053226363540804
+    second: Crack2.007|Crack2.001|Crack2|Camera.001|Camera|Action|Camera|Action|Crack2
+  - first:
+      74: 3548829898161546928
+    second: Crack2.007|Crack2.001|Crack2|Camera.001|Camera|CameraAction|Camera|CameraA
+  - first:
+      74: -5943682142946204754
+    second: Crack2.007|Crack2.001|Crack2|Camera.001|Camera|Shader NodetreeAction|Camer
+  - first:
+      74: 5999473619409067905
+    second: Crack2.007|Crack2.001|Crack2|Camera.002|Camera|Action|Camera|Action|Crack2
+  - first:
+      74: 5158245771209994018
+    second: Crack2.007|Crack2.001|Crack2|Camera.002|Camera|CameraAction|Camera|CameraA
+  - first:
+      74: 6662624805937911433
+    second: Crack2.007|Crack2.001|Crack2|Camera.002|Camera|Shader NodetreeAction|Camer
+  - first:
+      74: -1393829111073710773
+    second: Crack2.007|Crack2.001|Crack2|CameraAction|Crack2|CameraAction
+  - first:
+      74: -4972207432561185647
+    second: Crack2.007|Crack2.001|Crack2|Crack1Action|Crack2|Crack1Action
+  - first:
+      74: 6249082697493085622
+    second: Crack2.007|Crack2.001|Crack2|Crack2Action|Crack2|Crack2Action
+  - first:
+      74: -1735147254257797339
+    second: Crack2.007|Crack2.001|Crack2|Point.001Action|Crack2|Point.001Action
+  - first:
+      74: 6190798046686761157
+    second: Crack2.007|Crack2.001|Crack2|PointAction.001|Crack2|PointAction.001
+  - first:
+      74: 2008188462364073661
+    second: Crack2.007|Crack2.001|Crack2|PointAction.002|Crack2|PointAction.002
+  - first:
+      74: -2263266504711738182
+    second: Crack2.007|Crack2.001|Crack2|PointAction|Crack2|PointAction
+  - first:
+      74: 1741126197379077495
+    second: Crack2.007|Crack2.002Action.001
+  - first:
+      74: 4207853798086597461
+    second: Crack2.007|Crack2.002Action.002
+  - first:
+      74: -7057086518796581081
+    second: Crack2.007|Crack2.002|Crack2|Camera.001|Camera|Action|Camera|Action|Crack2
+  - first:
+      74: -8298866854209377972
+    second: Crack2.007|Crack2.002|Crack2|Camera.001|Camera|CameraAction|Camera|CameraA
+  - first:
+      74: 3868451341363841533
+    second: Crack2.007|Crack2.002|Crack2|Camera.001|Camera|Shader NodetreeAction|Camer
+  - first:
+      74: -3276940896301444440
+    second: Crack2.007|Crack2.002|Crack2|Camera.002|Camera|Action|Camera|Action|Crack2
+  - first:
+      74: 1573728597747597397
+    second: Crack2.007|Crack2.002|Crack2|Camera.002|Camera|CameraAction|Camera|CameraA
+  - first:
+      74: 3903233432907182249
+    second: Crack2.007|Crack2.002|Crack2|Camera.002|Camera|Shader NodetreeAction|Camer
+  - first:
+      74: -6393069955439261574
+    second: Crack2.007|Crack2.002|Crack2|CameraAction|Crack2|CameraAction
+  - first:
+      74: 10407092213614125
+    second: Crack2.007|Crack2.002|Crack2|Crack1Action|Crack2|Crack1Action
+  - first:
+      74: -6113546026578693177
+    second: Crack2.007|Crack2.002|Crack2|Crack2Action|Crack2|Crack2Action
+  - first:
+      74: -3031667974335056712
+    second: Crack2.007|Crack2.002|Crack2|Point.001Action|Crack2|Point.001Action
+  - first:
+      74: 2143873163917531620
+    second: Crack2.007|Crack2.002|Crack2|PointAction.001|Crack2|PointAction.001
+  - first:
+      74: -6895588300759357151
+    second: Crack2.007|Crack2.002|Crack2|PointAction.002|Crack2|PointAction.002
+  - first:
+      74: 9007711192123901862
+    second: Crack2.007|Crack2.002|Crack2|PointAction|Crack2|PointAction
+  - first:
+      74: -8336965850799000435
+    second: Crack2.007|Crack2.003Action.001
+  - first:
+      74: 4182261596584535854
+    second: Crack2.007|Crack2.003Action.002
+  - first:
+      74: -4365985857325371859
+    second: Crack2.007|Crack2.003|Crack2|Camera.001|Camera|Action|Camera|Action|Crack2
+  - first:
+      74: 2069624462555914363
+    second: Crack2.007|Crack2.003|Crack2|Camera.001|Camera|CameraAction|Camera|CameraA
+  - first:
+      74: 4281680887502675141
+    second: Crack2.007|Crack2.003|Crack2|Camera.001|Camera|Shader NodetreeAction|Camer
+  - first:
+      74: 489997614136557166
+    second: Crack2.007|Crack2.003|Crack2|Camera.002|Camera|Action|Camera|Action|Crack2
+  - first:
+      74: 7463919886887886973
+    second: Crack2.007|Crack2.003|Crack2|Camera.002|Camera|CameraAction|Camera|CameraA
+  - first:
+      74: 1802522606889171069
+    second: Crack2.007|Crack2.003|Crack2|Camera.002|Camera|Shader NodetreeAction|Camer
+  - first:
+      74: 2031185511262201249
+    second: Crack2.007|Crack2.003|Crack2|CameraAction|Crack2|CameraAction
+  - first:
+      74: 4066298585857807613
+    second: Crack2.007|Crack2.003|Crack2|Crack1Action|Crack2|Crack1Action
+  - first:
+      74: -2559229730400790377
+    second: Crack2.007|Crack2.003|Crack2|Crack2Action|Crack2|Crack2Action
+  - first:
+      74: 8839373817193974180
+    second: Crack2.007|Crack2.003|Crack2|Point.001Action|Crack2|Point.001Action
+  - first:
+      74: -3174313056219273393
+    second: Crack2.007|Crack2.003|Crack2|PointAction.001|Crack2|PointAction.001
+  - first:
+      74: 1535811981864290655
+    second: Crack2.007|Crack2.003|Crack2|PointAction.002|Crack2|PointAction.002
+  - first:
+      74: -1169523534055227711
+    second: Crack2.007|Crack2.003|Crack2|PointAction|Crack2|PointAction
+  - first:
+      74: -3231125103293998636
+    second: Crack2.007|Crack2Action
+  - first:
+      74: 3524086707090786861
+    second: Crack2.007|Crack2Action.001
+  - first:
+      74: -3634673049281160237
+    second: Crack2.007|Point.001Action
+  - first:
+      74: 3520047828116721850
+    second: Crack2.007|PointAction.002
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 1
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 0
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

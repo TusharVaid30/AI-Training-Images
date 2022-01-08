@@ -10,7 +10,9 @@ public class GetPixelPosition : MonoBehaviour
     [SerializeField] private new GameObject camera;
     [SerializeField] private Data data;
     [SerializeField] private Text debugText;
-    [SerializeField] private CoordsPerFrame[] coordsPerFrame;
+    [SerializeField] private Transform pointsHolder;
+    
+    private CoordsPerFrame[] coordsPerFrame;
 
     private const float TIME_TAKEN_PER_FRAME = 1f;
     private int numberOfFrames;
@@ -19,6 +21,7 @@ public class GetPixelPosition : MonoBehaviour
     private void Start()
     {
         numberOfFrames = data.numberOfFrames;
+        coordsPerFrame = pointsHolder.GetComponentsInChildren<CoordsPerFrame>();
     }
 
     private void Update()

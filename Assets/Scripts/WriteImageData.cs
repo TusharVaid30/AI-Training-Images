@@ -4,13 +4,21 @@ using UnityEngine.UI;
 
 public class WriteImageData : MonoBehaviour
 {
-    [SerializeField] private string path;
     [SerializeField] private Data data;
     [SerializeField] private GetPixelPosition pixelPosition;
     [SerializeField] private Text debugText;
     [SerializeField] private CoordsPerFrame[] coordsPerFrame;
+
+    [SerializeField] private Transform[] points;
     
+    
+    private string path;
     private bool stopWriting;
+
+    private void Start()
+    {
+        path = data.path;
+    }
 
     private void Update()
     {
@@ -27,26 +35,26 @@ public class WriteImageData : MonoBehaviour
 
     private void SetupData()
     {
-        WriteString("{");
-        WriteString("     \'data\':" + " [");
+        WriteStringLine("{");
+        WriteStringLine("     \"data\":" + " [");
         for (var i = 0; i <= data.numberOfFrames - 1; i++)
         {
-            WriteString("     [");
-            WriteString("     {\'img_name\'   :    " + "\'"+ (i + 1) + ".png\', \'damage_type\'  :   \'crack\', \'points\':   ");
+            WriteStringLine("     [");
+            WriteStringLine("     {\"img_name\"   :    " + "\""+ (i + 1) + ".png\", \"damage_type\"  :   \"crack\", \"points\":   ");
 
+            WriteStringLine("          [");
             for (var j = 0; j < coordsPerFrame.Length; j++)
             {
-                WriteString("          [");
-                WriteString("             [" + coordsPerFrame[j].coordsX[i] + "],");
-                WriteString("             [" + coordsPerFrame[j].coordsY[i] + "]");
-                WriteString(j == coordsPerFrame.Length - 1 ? "          ]" : "          ],");
+                WriteString("             [" + coordsPerFrame[j].coordsX[i] + ", " + coordsPerFrame[j].coordsY[i]);
+                WriteStringLine(j == coordsPerFrame.Length - 1 ? "]" : "],");
             }
+            WriteStringLine("          ]");
 
-            WriteString("      }");
-            WriteString(i == data.numberOfFrames - 1 ? "     ]" : "     ],");
+            WriteStringLine("      }");
+            WriteStringLine(i == data.numberOfFrames - 1 ? "     ]" : "     ],");
         }
 
-        WriteString("]}");
+        WriteStringLine("]}");
 
         DebugInfo("Data Written");
 
@@ -56,10 +64,17 @@ public class WriteImageData : MonoBehaviour
 #endif
     }
 
-    private void WriteString(string text)
+    private void WriteStringLine(string text)
     {
         var writer = new StreamWriter(path, true);
         writer.WriteLine(text);
+        writer.Close();
+    }
+
+    private void WriteString(string text)
+    {
+        var writer = new StreamWriter(path, true);
+        writer.Write(text);
         writer.Close();
     }
 }

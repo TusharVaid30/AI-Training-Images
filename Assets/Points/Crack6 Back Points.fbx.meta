@@ -1,0 +1,290 @@
+fileFormatVersion: 2
+guid: 752e5776304375c47b1ae0a10f9dce8e
+ModelImporter:
+  serializedVersion: 21202
+  internalIDToNameTable:
+  - first:
+      74: 1259655734736107425
+    second: bump_rea01_001.002|bump_rea01_001.001Action
+  - first:
+      74: -9015148878689467283
+    second: bump_rea01_001.002|bump_rea01_001.001Action.001
+  - first:
+      74: 7720847174282933777
+    second: bump_rea01_001.002|bump_rea01_001Action
+  - first:
+      74: 1888110338044676730
+    second: bump_rea01_001.002|bump_rea01_001Action.001
+  - first:
+      74: 8690412837383844926
+    second: bump_rea01_001.002|Camera.001|Camera|Action|Camera|Action
+  - first:
+      74: 1227641295919352567
+    second: bump_rea01_001.002|Camera.001|Camera|CameraAction|Camera|CameraAction
+  - first:
+      74: -8448043718556123505
+    second: bump_rea01_001.002|Camera.001|Camera|Shader NodetreeAction|Camera|Shader
+      NodetreeA
+  - first:
+      74: 1657015974437656183
+    second: bump_rea01_001.002|Camera.002|Camera|Action|Camera|Action
+  - first:
+      74: -1048647473993232561
+    second: bump_rea01_001.002|Camera.002|Camera|CameraAction|Camera|CameraAction
+  - first:
+      74: 8311004670683130796
+    second: bump_rea01_001.002|Camera.002|Camera|Shader NodetreeAction|Camera|Shader
+      NodetreeA
+  - first:
+      74: -2854258303556224494
+    second: bump_rea01_001.002|CameraAction
+  - first:
+      74: -8868311010968904140
+    second: bump_rea01_001.002|Crack1Action
+  - first:
+      74: 7802203332274050788
+    second: bump_rea01_001.002|Crack2.001Action
+  - first:
+      74: -6122016600421180143
+    second: bump_rea01_001.002|Crack2.001Action.001
+  - first:
+      74: 1614703989515476250
+    second: bump_rea01_001.002|Crack2.001|Crack2|Camera.001|Camera|Action|Camera|Action|Crack2
+  - first:
+      74: -5582120548552523735
+    second: bump_rea01_001.002|Crack2.001|Crack2|Camera.001|Camera|CameraAction|Camera|CameraA
+  - first:
+      74: -3895809200535818680
+    second: bump_rea01_001.002|Crack2.001|Crack2|Camera.001|Camera|Shader NodetreeAction|Camer
+  - first:
+      74: 4378427928607622602
+    second: bump_rea01_001.002|Crack2.001|Crack2|Camera.002|Camera|Action|Camera|Action|Crack2
+  - first:
+      74: 2765968186146113519
+    second: bump_rea01_001.002|Crack2.001|Crack2|Camera.002|Camera|CameraAction|Camera|CameraA
+  - first:
+      74: 6631871925904657058
+    second: bump_rea01_001.002|Crack2.001|Crack2|Camera.002|Camera|Shader NodetreeAction|Camer
+  - first:
+      74: 2498528664456551317
+    second: bump_rea01_001.002|Crack2.001|Crack2|CameraAction|Crack2|CameraAction
+  - first:
+      74: -7461634146903901022
+    second: bump_rea01_001.002|Crack2.001|Crack2|Crack1Action|Crack2|Crack1Action
+  - first:
+      74: 6607249769860297281
+    second: bump_rea01_001.002|Crack2.001|Crack2|Crack2Action|Crack2|Crack2Action
+  - first:
+      74: 3187237155486270667
+    second: bump_rea01_001.002|Crack2.001|Crack2|Point.001Action|Crack2|Point.001Action
+  - first:
+      74: 3106404069102579002
+    second: bump_rea01_001.002|Crack2.001|Crack2|PointAction.001|Crack2|PointAction.001
+  - first:
+      74: 8107665220992483924
+    second: bump_rea01_001.002|Crack2.001|Crack2|PointAction.002|Crack2|PointAction.002
+  - first:
+      74: -2040938154048035607
+    second: bump_rea01_001.002|Crack2.001|Crack2|PointAction|Crack2|PointAction
+  - first:
+      74: -1008169481564793027
+    second: bump_rea01_001.002|Crack2.002Action.001
+  - first:
+      74: 2902970561488818392
+    second: bump_rea01_001.002|Crack2.002Action.002
+  - first:
+      74: 1296924680541925197
+    second: bump_rea01_001.002|Crack2.002|Crack2|Camera.001|Camera|Action|Camera|Action|Crack2
+  - first:
+      74: 4395725257521970478
+    second: bump_rea01_001.002|Crack2.002|Crack2|Camera.001|Camera|CameraAction|Camera|CameraA
+  - first:
+      74: -7284332195918088547
+    second: bump_rea01_001.002|Crack2.002|Crack2|Camera.001|Camera|Shader NodetreeAction|Camer
+  - first:
+      74: -2770617732864446258
+    second: bump_rea01_001.002|Crack2.002|Crack2|Camera.002|Camera|Action|Camera|Action|Crack2
+  - first:
+      74: -4230105281753045154
+    second: bump_rea01_001.002|Crack2.002|Crack2|Camera.002|Camera|CameraAction|Camera|CameraA
+  - first:
+      74: 5567780796282924653
+    second: bump_rea01_001.002|Crack2.002|Crack2|Camera.002|Camera|Shader NodetreeAction|Camer
+  - first:
+      74: -115052839793500083
+    second: bump_rea01_001.002|Crack2.002|Crack2|CameraAction|Crack2|CameraAction
+  - first:
+      74: -8771009184025425142
+    second: bump_rea01_001.002|Crack2.002|Crack2|Crack1Action|Crack2|Crack1Action
+  - first:
+      74: 6565131442134494829
+    second: bump_rea01_001.002|Crack2.002|Crack2|Crack2Action|Crack2|Crack2Action
+  - first:
+      74: 5063910984262547721
+    second: bump_rea01_001.002|Crack2.002|Crack2|Point.001Action|Crack2|Point.001Action
+  - first:
+      74: -6064268651811694434
+    second: bump_rea01_001.002|Crack2.002|Crack2|PointAction.001|Crack2|PointAction.001
+  - first:
+      74: 463041014887409816
+    second: bump_rea01_001.002|Crack2.002|Crack2|PointAction.002|Crack2|PointAction.002
+  - first:
+      74: 4594286069884037926
+    second: bump_rea01_001.002|Crack2.002|Crack2|PointAction|Crack2|PointAction
+  - first:
+      74: -3320956618775800878
+    second: bump_rea01_001.002|Crack2.003Action.001
+  - first:
+      74: 5733993529600721709
+    second: bump_rea01_001.002|Crack2.003Action.002
+  - first:
+      74: 7843322622844884809
+    second: bump_rea01_001.002|Crack2.003|Crack2|Camera.001|Camera|Action|Camera|Action|Crack2
+  - first:
+      74: -7004133422236708870
+    second: bump_rea01_001.002|Crack2.003|Crack2|Camera.001|Camera|CameraAction|Camera|CameraA
+  - first:
+      74: 6814843857902871794
+    second: bump_rea01_001.002|Crack2.003|Crack2|Camera.001|Camera|Shader NodetreeAction|Camer
+  - first:
+      74: 8933479371815041610
+    second: bump_rea01_001.002|Crack2.003|Crack2|Camera.002|Camera|Action|Camera|Action|Crack2
+  - first:
+      74: -6542307527618606758
+    second: bump_rea01_001.002|Crack2.003|Crack2|Camera.002|Camera|CameraAction|Camera|CameraA
+  - first:
+      74: 4440877036632069386
+    second: bump_rea01_001.002|Crack2.003|Crack2|Camera.002|Camera|Shader NodetreeAction|Camer
+  - first:
+      74: 2238686378604631250
+    second: bump_rea01_001.002|Crack2.003|Crack2|CameraAction|Crack2|CameraAction
+  - first:
+      74: -3468574190512517189
+    second: bump_rea01_001.002|Crack2.003|Crack2|Crack1Action|Crack2|Crack1Action
+  - first:
+      74: -7860102142748537260
+    second: bump_rea01_001.002|Crack2.003|Crack2|Crack2Action|Crack2|Crack2Action
+  - first:
+      74: 1681567081543200104
+    second: bump_rea01_001.002|Crack2.003|Crack2|Point.001Action|Crack2|Point.001Action
+  - first:
+      74: -2195359725693405237
+    second: bump_rea01_001.002|Crack2.003|Crack2|PointAction.001|Crack2|PointAction.001
+  - first:
+      74: 2873714521949386267
+    second: bump_rea01_001.002|Crack2.003|Crack2|PointAction.002|Crack2|PointAction.002
+  - first:
+      74: 5260402732782651508
+    second: bump_rea01_001.002|Crack2.003|Crack2|PointAction|Crack2|PointAction
+  - first:
+      74: -4336999548334033600
+    second: bump_rea01_001.002|Crack2Action
+  - first:
+      74: -6434299316875760564
+    second: bump_rea01_001.002|Crack2Action.001
+  - first:
+      74: 617927261466809051
+    second: bump_rea01_001.002|Point.001Action
+  - first:
+      74: 9057191930350686409
+    second: bump_rea01_001.002|PointAction.002
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 1
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 0
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
