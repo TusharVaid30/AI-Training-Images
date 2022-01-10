@@ -10,10 +10,13 @@ public class WriteImageData : MonoBehaviour
     [SerializeField] private CoordsPerFrame[] coordsPerFrame;
 
     [SerializeField] private Transform[] points;
-    
+
+    private int pointCurrentlyWriting;
     
     private string path;
     private bool stopWriting;
+
+    private int k;
 
     private void Start()
     {
@@ -41,17 +44,29 @@ public class WriteImageData : MonoBehaviour
         {
             WriteStringLine("     [");
             WriteStringLine("     {\"img_name\"   :    " + "\""+ (i + 1) + ".png\", \"damage_type\"  :   \"crack\", \"points\":   ");
-
-            WriteStringLine("          [");
-            for (var j = 0; j < coordsPerFrame.Length; j++)
+            
+            if (i is 120 or 220 or 320 or 420 or 520 or 620 or 720 or 820 or 920)
             {
-                WriteString("             [" + coordsPerFrame[j].coordsX[i] + ", " + coordsPerFrame[j].coordsY[i]);
-                WriteStringLine(j == coordsPerFrame.Length - 1 ? "]" : "],");
+                if (k < points.Length)
+                    k++;
+                pointCurrentlyWriting = 0;
             }
+            
+            WriteStringLine("          [");
+            for (var j = 0; j < points[k].childCount; j++)
+            {
+                WriteString("             [" + points[k].GetChild(j).GetComponent<CoordsPerFrame>().coordsX[pointCurrentlyWriting] + ", " + 
+                            points[k].GetChild(j).GetComponent<CoordsPerFrame>().coordsY[pointCurrentlyWriting]);
+                WriteStringLine(j == points[k].childCount - 1 ? "]" : "],");
+            }
+
             WriteStringLine("          ]");
 
             WriteStringLine("      }");
             WriteStringLine(i == data.numberOfFrames - 1 ? "     ]" : "     ],");
+
+            pointCurrentlyWriting++;
+
         }
 
         WriteStringLine("]}");

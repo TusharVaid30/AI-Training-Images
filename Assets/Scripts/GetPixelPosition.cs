@@ -21,7 +21,6 @@ public class GetPixelPosition : MonoBehaviour
     private void Start()
     {
         numberOfFrames = data.numberOfFrames;
-        coordsPerFrame = pointsHolder.GetComponentsInChildren<CoordsPerFrame>();
     }
 
     private void Update()
@@ -29,8 +28,8 @@ public class GetPixelPosition : MonoBehaviour
         if (!Input.GetMouseButtonDown(0)) return;
         cameraPosition.Play(stateNameHash, -1, 0f);
         SetCamPosition();
-            
         InvokeRepeating(nameof(Run), TIME_TAKEN_PER_FRAME, TIME_TAKEN_PER_FRAME);
+        GetComponent<Animator>().Play("ChangeData", -1, 0f);
     }
 
     private void SetCamPosition()
@@ -60,7 +59,7 @@ public class GetPixelPosition : MonoBehaviour
         SetCamPosition();
 
         if (Camera.main is null) return;
-        foreach (var coords in coordsPerFrame)
+        foreach (var coords in pointsHolder.GetComponentsInChildren<CoordsPerFrame>())
         {
             var screenPosition = Camera.main.WorldToScreenPoint(coords.transform.position);
 

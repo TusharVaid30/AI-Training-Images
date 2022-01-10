@@ -21,29 +21,29 @@ AnimationClip:
   - curve:
     - time: 0
       value: {fileID: 0}
-    - time: 2.0166667
+    - time: 120
       value: {fileID: 0}
-    - time: 3.6833334
+    - time: 220
       value: {fileID: 0}
-    - time: 5.35
+    - time: 320
       value: {fileID: 0}
-    - time: 7.016667
+    - time: 420
       value: {fileID: 0}
-    - time: 8.683333
+    - time: 520
       value: {fileID: 0}
-    - time: 10.35
+    - time: 620
       value: {fileID: 0}
-    - time: 12.016666
+    - time: 720
       value: {fileID: 0}
-    - time: 13.683333
+    - time: 820
       value: {fileID: 0}
-    - time: 15.35
+    - time: 920
       value: {fileID: 0}
     attribute: pointsHolder
     path: 
     classID: 114
     script: {fileID: 11500000, guid: f92eac59be8dc824db1065d60fcb384a, type: 3}
-  m_SampleRate: 60
+  m_SampleRate: 1
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -73,7 +73,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 15.366667
+    m_StopTime: 921
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
