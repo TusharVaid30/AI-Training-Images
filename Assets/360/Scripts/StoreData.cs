@@ -8,7 +8,6 @@ namespace _360.Scripts
     {
         [SerializeField] private CollectData data;
 
-        private int carIndex = 1;
         private int index;
         
         private void OnEnable()
