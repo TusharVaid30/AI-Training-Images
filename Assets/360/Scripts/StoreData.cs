@@ -23,31 +23,25 @@ namespace _360.Scripts
 
         private void WriteData()
         {
-            if (index > 719) return;
             Output.WriteStringLine("{");
 
-            Output.WriteStringLine("     \"Car " + carIndex + "\": [");
-            Output.WriteStringLine("     [");
+            Output.WriteStringLine("     \"Car " + 10 + "\": [");
 
-            for (var i = 0; i <= 239; i++)
+            for (var i = 0; i <= 719; i++)
             {
                 Output.WriteString("     [");
                 Output.WriteStringLine("     {\"img_name\"    :    \"" + (index + 1) + ".png\", " +
-                                       "\"properties(x, y, z, rot)\":");
+                                       "\"properties(x, y, z, x-angle, y-angle, z-angle)\":");
                 Output.WriteString("               [");
                 var tempVec = data.positionVector[index];
                 Output.WriteString(tempVec.x.ToString(CultureInfo.InvariantCulture) + ", " +
                                    tempVec.y.ToString(CultureInfo.InvariantCulture)
-                                   + ", " + tempVec.z.ToString(CultureInfo.InvariantCulture) + ", " +
-                                   data.cameraRotation[index]);
+                                   + ", " + tempVec.z.ToString(CultureInfo.InvariantCulture) + ", " + 
+                                   data.xzRotation[index].x + ", " + data.cameraRotation[index] + ", " + data.xzRotation[index].y);
                 Output.WriteStringLine("]");
                 index++;
                 Output.WriteStringLine("     }");
-                Output.WriteStringLine(i == 239 ? "     ]" : "     ],");
-                if (i != 239) continue;
-                carIndex++;
-                if (carIndex < 3)
-                    WriteData();
+                Output.WriteStringLine(i == 719 ? "     ]" : "     ],");
             }
         }
     }

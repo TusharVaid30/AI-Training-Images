@@ -57,8 +57,12 @@ namespace _360.Scripts
                 OnStart?.Invoke();
                 return;
             }
-            data.positionVector.Add(transform.position);
+            var mainCam = transform;
+            data.positionVector.Add(mainCam.position);
             data.cameraRotation.Add(currentFrame / 2f);
+            
+            var rotation = mainCam.eulerAngles;
+            data.xzRotation.Add(new Vector2(rotation.x, rotation.z));
             
             currentFrame++;
         }
