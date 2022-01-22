@@ -33,12 +33,6 @@ AnimationClip:
       value: {fileID: 0}
     - time: 620
       value: {fileID: 0}
-    - time: 720
-      value: {fileID: 0}
-    - time: 820
-      value: {fileID: 0}
-    - time: 920
-      value: {fileID: 0}
     attribute: pointsHolder
     path: 
     classID: 114
@@ -65,15 +59,12 @@ AnimationClip:
     - {fileID: 0}
     - {fileID: 0}
     - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 921
+    m_StopTime: 621
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
