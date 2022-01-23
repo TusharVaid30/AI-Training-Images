@@ -39,7 +39,7 @@ public class WriteImageData : MonoBehaviour
     private void SetupData()
     {
         WriteStringLine("{");
-        WriteStringLine("     \"Car 1\":" + " [");
+        WriteStringLine("     \"Car 2\":" + " [");
         for (var i = 0; i <= data.numberOfFrames - 1; i++)
         {
             WriteStringLine("     [");

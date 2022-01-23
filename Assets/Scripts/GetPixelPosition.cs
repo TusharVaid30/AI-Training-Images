@@ -1,3 +1,4 @@
+using System;
 using System.Globalization;
 using UnityEngine;
 using UnityEngine.UI;
@@ -18,6 +19,13 @@ public class GetPixelPosition : MonoBehaviour
     private int numberOfFrames;
     private readonly int stateNameHash = Animator.StringToHash("Camera Movement");
 
+    private Animator anim;
+    
+    private void Awake()
+    {
+        anim = GetComponent<Animator>();
+    }
+
     private void Start()
     {
         numberOfFrames = data.numberOfFrames;
@@ -27,9 +35,9 @@ public class GetPixelPosition : MonoBehaviour
     {
         if (!Input.GetMouseButtonDown(0)) return;
         cameraPosition.Play(stateNameHash, -1, 0f);
-        SetCamPosition();
-        InvokeRepeating(nameof(Run), TIME_TAKEN_PER_FRAME, TIME_TAKEN_PER_FRAME);
-        GetComponent<Animator>().Play("ChangeData", -1, 0f);
+        SetCamPosition(); 
+        //InvokeRepeating(nameof(Run), TIME_TAKEN_PER_FRAME, TIME_TAKEN_PER_FRAME);
+        anim.Play("ChangeData", -1, 0f);
     }
 
     private void SetCamPosition()
@@ -45,7 +53,7 @@ public class GetPixelPosition : MonoBehaviour
         debugText.text = info;
     }
     
-    private void Run()
+    public void Run()
     {
         if (framesDone > numberOfFrames)
         {

@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace Misc_
 {
+    [ExecuteInEditMode]
     public class ReverseChildrenIndex : MonoBehaviour
     {
         private void Start()

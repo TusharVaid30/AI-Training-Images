@@ -4,13 +4,14 @@ using UnityEngine;
 
 namespace Misc_
 {
+    [ExecuteInEditMode]
     public class AlignCrackPoints : MonoBehaviour
     {
-        private List<Transform> points = new List<Transform>();
+        private readonly List<Transform> points = new List<Transform>();
 
         private Transform current;
         
-        private Transform GetClosestObject(Transform currentObj, IEnumerable<Transform> enemies)
+        private static Transform GetClosestObject(Transform currentObj, IEnumerable<Transform> enemies)
         {
             Transform tMin = null;
             var minDist = Mathf.Infinity;
@@ -28,8 +29,10 @@ namespace Misc_
         private void Start()
         {
             current = transform;
-            foreach (var point in transform.parent.GetComponentsInChildren<Transform>())
-                points.Add(point);
+            for (var i = 0; i < transform.parent.childCount; i++)
+            {
+                points.Add(transform.parent.GetChild(i));
+            }
             points.Remove(current);
         }
 
