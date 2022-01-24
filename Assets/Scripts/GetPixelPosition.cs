@@ -14,7 +14,6 @@ public class GetPixelPosition : MonoBehaviour
     
     private CoordsPerFrame[] coordsPerFrame;
 
-    private const float TIME_TAKEN_PER_FRAME = 1f;
     private int numberOfFrames;
     private readonly int stateNameHash = Animator.StringToHash("Camera Movement");
 
@@ -28,7 +27,6 @@ public class GetPixelPosition : MonoBehaviour
         if (!Input.GetMouseButtonDown(0)) return;
         cameraPosition.Play(stateNameHash, -1, 0f);
         SetCamPosition();
-        InvokeRepeating(nameof(Run), TIME_TAKEN_PER_FRAME, TIME_TAKEN_PER_FRAME);
         GetComponent<Animator>().Play("ChangeData", -1, 0f);
     }
 

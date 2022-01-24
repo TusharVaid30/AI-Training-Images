@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace Misc_
 {
+    [ExecuteInEditMode]
     public class AlignCrackPoints : MonoBehaviour
     {
         private List<Transform> points = new List<Transform>();
@@ -28,8 +29,8 @@ namespace Misc_
         private void Start()
         {
             current = transform;
-            foreach (var point in transform.parent.GetComponentsInChildren<Transform>())
-                points.Add(point);
+            for (var i = 0; i < transform.parent.childCount; i++)
+                points.Add(transform.parent.GetChild(i));
             points.Remove(current);
         }
 
