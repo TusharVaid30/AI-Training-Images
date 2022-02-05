@@ -285,6 +285,67 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f71d05d7be799c46b9bbf17937bb56e, type: 3}
+--- !u!1001 &500710877
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 5fa636b2757ab194b9aeb82ee777cb00, type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5fa636b2757ab194b9aeb82ee777cb00, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -7.8300548
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5fa636b2757ab194b9aeb82ee777cb00, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.483426
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5fa636b2757ab194b9aeb82ee777cb00, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.27460623
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5fa636b2757ab194b9aeb82ee777cb00, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7111523
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5fa636b2757ab194b9aeb82ee777cb00, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.01909628
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5fa636b2757ab194b9aeb82ee777cb00, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7025254
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5fa636b2757ab194b9aeb82ee777cb00, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.01886447
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5fa636b2757ab194b9aeb82ee777cb00, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5fa636b2757ab194b9aeb82ee777cb00, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5fa636b2757ab194b9aeb82ee777cb00, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5fa636b2757ab194b9aeb82ee777cb00, type: 3}
+      propertyPath: m_Name
+      value: Lexus Temp Camfbx
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5fa636b2757ab194b9aeb82ee777cb00, type: 3}
+      propertyPath: m_TagString
+      value: MainCamera
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5fa636b2757ab194b9aeb82ee777cb00, type: 3}
 --- !u!1 &554957896
 GameObject:
   m_ObjectHideFlags: 0
@@ -1150,13 +1211,7 @@ MonoBehaviour:
   - {fileID: 8804348397283655167}
   - {fileID: 8788472182687779414}
   points:
-  - {fileID: 543450653333754089}
-  - {fileID: 543450652994904310}
-  - {fileID: 543450652345446052}
-  - {fileID: 543450653341601286}
-  - {fileID: 543450653260846088}
   - {fileID: 543450653618082831}
-  - {fileID: 543450653618507424}
 --- !u!114 &1047038094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8138,11 +8193,11 @@ GameObject:
   - component: {fileID: 486167116729937532}
   m_Layer: 0
   m_Name: Main Camera
-  m_TagString: MainCamera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &919132148785969740
 GameObject:
   m_ObjectHideFlags: 0
