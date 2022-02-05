@@ -341,6 +341,10 @@ PrefabInstance:
       value: Lexus Temp Camfbx
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 5fa636b2757ab194b9aeb82ee777cb00, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5fa636b2757ab194b9aeb82ee777cb00, type: 3}
       propertyPath: m_TagString
       value: MainCamera
       objectReference: {fileID: 0}
@@ -1211,7 +1215,13 @@ MonoBehaviour:
   - {fileID: 8804348397283655167}
   - {fileID: 8788472182687779414}
   points:
+  - {fileID: 543450653333754089}
+  - {fileID: 543450652994904310}
+  - {fileID: 543450652345446052}
+  - {fileID: 543450653341601286}
+  - {fileID: 543450653260846088}
   - {fileID: 543450653618082831}
+  - {fileID: 543450653618507424}
 --- !u!114 &1047038094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1281,7 +1291,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 4.575758, y: -15.936641, z: 0.0000070661545}
+  m_LocalEulerAnglesHint: {x: 2.9757879, y: -47.61668, z: -0.000008869862}
 --- !u!95 &1576491046
 Animator:
   serializedVersion: 4
@@ -8193,11 +8203,11 @@ GameObject:
   - component: {fileID: 486167116729937532}
   m_Layer: 0
   m_Name: Main Camera
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &919132148785969740
 GameObject:
   m_ObjectHideFlags: 0
