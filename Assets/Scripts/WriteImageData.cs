@@ -39,11 +39,10 @@ public class WriteImageData : MonoBehaviour
     private void SetupData()
     {
         WriteStringLine("{");
-        WriteStringLine("     \"Car 2\":" + " [");
+        WriteStringLine("     \"hatch-05-02-22\":" + " [");
         for (var i = 0; i <= data.numberOfFrames - 1; i++)
         {
-            WriteStringLine("     [");
-            WriteStringLine("     {\"img_name\"   :    " + "\""+ (i + 1) + ".png\", \"damage_type\"  :   \"crack\", \"points\":   ");
+            WriteStringLine("     {\"file_name\"   :    " + "\"hatch_05-02-22_"+ (i + 1) + ".png\", \"category\"  :   \"crack\", \"segmentation\":   ");
             
             if (i is 120 or 220 or 320 or 420 or 520 or 620 or 720 or 820 or 920)
             {
@@ -59,17 +58,16 @@ public class WriteImageData : MonoBehaviour
                             points[k].GetChild(j).GetComponent<CoordsPerFrame>().coordsY[pointCurrentlyWriting]);
                 WriteStringLine(j == points[k].childCount - 1 ? "]" : "],");
             }
+            WriteStringLine("      ]");
 
-            WriteStringLine("          ]");
-
-            WriteStringLine("      }");
-            WriteStringLine(i == data.numberOfFrames - 1 ? "     ]" : "     ],");
+            WriteStringLine(i == data.numberOfFrames - 1 ? "     }" : "     },");
 
             pointCurrentlyWriting++;
 
         }
 
-        WriteStringLine("]}");
+        WriteStringLine("]");
+        WriteStringLine("}");
 
         DebugInfo("Data Written");
 
