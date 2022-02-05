@@ -7,9 +7,8 @@ public class WriteImageData : MonoBehaviour
     [SerializeField] private Data data;
     [SerializeField] private GetPixelPosition pixelPosition;
     [SerializeField] private Text debugText;
-    [SerializeField] private CoordsPerFrame[] coordsPerFrame;
 
-    [SerializeField] private Transform[] points;
+    [SerializeField] private Transform[] panels;
     
     
     private string path;
@@ -40,14 +39,22 @@ public class WriteImageData : MonoBehaviour
         for (var i = 0; i <= data.numberOfFrames - 1; i++)
         {
             WriteStringLine("     [");
-            WriteStringLine("     {\"img_name\"   :    " + "\""+ (i + 1) + ".png\", \"damage_type\"  :   \"crack\", \"points\":   ");
+            WriteStringLine("     {\"img_name\"   :    " + "\""+ (i + 1) + ".png\":");
 
             WriteStringLine("          [");
-            for (var j = 0; j < coordsPerFrame.Length; j++)
+            for (var x = 0; x < panels.Length; x++)
             {
-                WriteString("             [" + coordsPerFrame[j].coordsX[i] + ", " + coordsPerFrame[j].coordsY[i]);
-                WriteStringLine(j == coordsPerFrame.Length - 1 ? "]" : "],");
+                WriteStringLine("               \"Panel Name\": " + "\"" + panels[x].name + "\": ");
+                WriteStringLine("                [");
+                for (var j = 0; j < panels[x].childCount; j++)
+                {
+                    WriteString("                       [" + panels[x].GetChild(j).GetComponent<CoordsPerFrame>().coordsX[i] + ", " + 
+                                panels[x].GetChild(j).GetComponent<CoordsPerFrame>().coordsY[i]);
+                    WriteStringLine(j == panels[x].childCount - 1 ? "]" : "],");
+                }
+                WriteStringLine("                ]");
             }
+
             WriteStringLine("          ]");
 
             WriteStringLine("      }");

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fd5548f2993236488a22dce399829b2, type: 3}
   m_Name: Data
   m_EditorClassIdentifier: 
-  numberOfFrames: 4
-  path: C:\Users\tusha\Documents\Blender\Projects\Cracked Car for AI\AI Data.txt
+  numberOfFrames: 2500
+  path: C:\Users\tusha\Documents\Blender\Projects\Panel Segmentation\PanelSegmentsData.json

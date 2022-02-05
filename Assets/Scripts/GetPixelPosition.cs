@@ -10,7 +10,7 @@ public class GetPixelPosition : MonoBehaviour
     [SerializeField] private new GameObject camera;
     [SerializeField] private Data data;
     [SerializeField] private Text debugText;
-    [SerializeField] private Transform pointsHolder;
+    [SerializeField] private CoordsPerFrame[] pointsHolder;
     
     private CoordsPerFrame[] coordsPerFrame;
 
@@ -21,16 +21,17 @@ public class GetPixelPosition : MonoBehaviour
     private void Start()
     {
         numberOfFrames = data.numberOfFrames;
-        coordsPerFrame = pointsHolder.GetComponentsInChildren<CoordsPerFrame>();
     }
-
+    
     private void Update()
     {
-        if (!Input.GetMouseButtonDown(0)) return;
-        cameraPosition.Play(stateNameHash, -1, 0f);
-        SetCamPosition();
-            
-        InvokeRepeating(nameof(Run), TIME_TAKEN_PER_FRAME, TIME_TAKEN_PER_FRAME);
+        if (Input.GetMouseButtonDown(1))
+        {
+            cameraPosition.Play(stateNameHash, -1, 0f);
+            SetCamPosition();
+
+            InvokeRepeating(nameof(Run), TIME_TAKEN_PER_FRAME, TIME_TAKEN_PER_FRAME);
+        }
     }
 
     private void SetCamPosition()
@@ -60,7 +61,7 @@ public class GetPixelPosition : MonoBehaviour
         SetCamPosition();
 
         if (Camera.main is null) return;
-        foreach (var coords in coordsPerFrame)
+        foreach (var coords in pointsHolder)
         {
             var screenPosition = Camera.main.WorldToScreenPoint(coords.transform.position);
 
