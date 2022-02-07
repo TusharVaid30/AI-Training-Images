@@ -1,4 +1,5 @@
 using System.IO;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,7 +10,6 @@ public class WriteImageData : MonoBehaviour
     [SerializeField] private Text debugText;
 
     [SerializeField] private Transform[] panels;
-    
     
     private string path;
     private bool stopWriting;
@@ -46,11 +46,10 @@ public class WriteImageData : MonoBehaviour
             {
                 WriteStringLine("               \"Panel Name\": " + "\"" + panels[x].name + "\": ");
                 WriteStringLine("                [");
-                for (var j = 0; j < panels[x].childCount; j++)
+                for (var j = 0; j < panels[x].GetComponent<FramesAndCoords>().data[i].Count; j++)
                 {
-                    WriteString("                       [" + panels[x].GetChild(j).GetComponent<CoordsPerFrame>().coordsX[i] + ", " + 
-                                panels[x].GetChild(j).GetComponent<CoordsPerFrame>().coordsY[i]);
-                    WriteStringLine(j == panels[x].childCount - 1 ? "]" : "],");
+                    WriteString("                       [" + panels[x].GetComponent<FramesAndCoords>().data[i][j]);
+                    WriteStringLine(j == panels[x].GetComponent<FramesAndCoords>().data.Values.Count - 1 ? "]" : "],");
                 }
                 WriteStringLine("                ]");
             }

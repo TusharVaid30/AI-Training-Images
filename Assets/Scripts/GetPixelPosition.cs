@@ -10,17 +10,20 @@ public class GetPixelPosition : MonoBehaviour
     [SerializeField] private new GameObject camera;
     [SerializeField] private Data data;
     [SerializeField] private Text debugText;
-    [SerializeField] private CoordsPerFrame[] pointsHolder;
-    
+
     private CoordsPerFrame[] coordsPerFrame;
 
     private const float TIME_TAKEN_PER_FRAME = 1f;
     private int numberOfFrames;
     private readonly int stateNameHash = Animator.StringToHash("Camera Movement");
-
+    private MeshManipulation[] updateMesh;
+    private StoreData[] storeDatas;
+    
     private void Start()
     {
         numberOfFrames = data.numberOfFrames;
+        updateMesh = FindObjectsOfType<MeshManipulation>();
+        storeDatas = FindObjectsOfType<StoreData>();
     }
     
     private void Update()
@@ -55,18 +58,15 @@ public class GetPixelPosition : MonoBehaviour
             return;
         }
 
+        foreach (var mesh in updateMesh)
+            mesh.UpdateBorders();
+
+        foreach (var storeData in storeDatas)
+            storeData.Store(framesDone);
+        
         framesDone++;
         
         DebugStatus("Capturing Frame " + framesDone);
         SetCamPosition();
-
-        if (Camera.main is null) return;
-        foreach (var coords in pointsHolder)
-        {
-            var screenPosition = Camera.main.WorldToScreenPoint(coords.transform.position);
-
-            coords.coordsX.Add((screenPosition.x).ToString(CultureInfo.InvariantCulture));
-            coords.coordsY.Add((1080 - screenPosition.y).ToString(CultureInfo.InvariantCulture));
-        }
     }
 }
