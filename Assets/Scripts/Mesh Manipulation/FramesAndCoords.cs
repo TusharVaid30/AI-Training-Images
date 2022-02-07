@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class FramesAndCoords : MonoBehaviour
 {
-    public Dictionary<int, List<Vector2>> data = new Dictionary<int, List<Vector2>>();
+    public Dictionary<int, Vector2[]> data = new Dictionary<int, Vector2[]>();
 }

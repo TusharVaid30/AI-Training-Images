@@ -1,3 +1,4 @@
+using System;
 using System.IO;
 using System.Linq;
 using UnityEngine;
@@ -13,15 +14,18 @@ public class WriteImageData : MonoBehaviour
     
     private string path;
     private bool stopWriting;
+    private StreamWriter writer;
 
     private void Start()
     {
         path = data.path;
+        OpenFile();
     }
 
     private void Update()
     {
         if (pixelPosition.framesDone < data.numberOfFrames || stopWriting) return;
+        print(panels[7].GetComponent<FramesAndCoords>().data[1][0]);
         SetupData();
         stopWriting = true;
     }
@@ -46,10 +50,10 @@ public class WriteImageData : MonoBehaviour
             {
                 WriteStringLine("               \"Panel Name\": " + "\"" + panels[x].name + "\": ");
                 WriteStringLine("                [");
-                for (var j = 0; j < panels[x].GetComponent<FramesAndCoords>().data[i].Count; j++)
+                for (var j = 0; j < panels[x].GetComponent<FramesAndCoords>().data[i].Length; j++)
                 {
                     WriteString("                       [" + panels[x].GetComponent<FramesAndCoords>().data[i][j]);
-                    WriteStringLine(j == panels[x].GetComponent<FramesAndCoords>().data.Values.Count - 1 ? "]" : "],");
+                    WriteStringLine(j == panels[x].GetComponent<FramesAndCoords>().data[i].Length - 1 ? "]" : "],");
                 }
                 WriteStringLine("                ]");
             }
@@ -70,17 +74,23 @@ public class WriteImageData : MonoBehaviour
 #endif
     }
 
+    private void OpenFile()
+    {
+        writer = new StreamWriter(path, true);
+    }
+
     private void WriteStringLine(string text)
     {
-        var writer = new StreamWriter(path, true);
         writer.WriteLine(text);
-        writer.Close();
     }
 
     private void WriteString(string text)
     {
-        var writer = new StreamWriter(path, true);
         writer.Write(text);
+    }
+
+    private void OnDestroy()
+    {
         writer.Close();
     }
 }
