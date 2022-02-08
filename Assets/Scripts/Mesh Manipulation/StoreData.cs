@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -32,8 +33,14 @@ public class StoreData : MonoBehaviour
         //     if (transform.name == "Grill" && position.x > 1500f)
         //         print(position);
         // } = positions;
-        if (transform.name == "Grill")
-            print(framesAndCoords.data[0][0]);
+        StartCoroutine(Delay());        
+    }
 
+    private IEnumerator Delay()
+    {
+        yield return new WaitForSeconds(.2f);
+        if (transform.CompareTag("AUTOMESH"))
+            for (var i = 0; i < transform.childCount; i++)
+                Destroy(transform.GetChild(i).gameObject);  
     }
 }
