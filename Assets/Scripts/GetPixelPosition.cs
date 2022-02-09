@@ -66,9 +66,9 @@ public class GetPixelPosition : MonoBehaviour
        
         for (var i = 0; i < frontBumper.childCount; i++)
             frontBumper.GetChild(i).parent = points[framesDone - 1];
-        for (var i = 0; i < points[framesDone].childCount; i++)
-            points[framesDone].GetChild(i).parent = frontBumper;
-        
+        while (points[framesDone].childCount > 0)
+            points[framesDone].GetChild(points[framesDone].childCount - 1).SetParent(frontBumper);
+
         framesDone++;
         
         DebugStatus("Capturing Frame " + framesDone);
