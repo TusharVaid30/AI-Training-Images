@@ -17,6 +17,7 @@ public class StoreData : MonoBehaviour
 
     public void Store(int frame)
     {
+        if (transform.childCount == 0) return;
         var positions = new Vector2[transform.childCount];
         if (Camera.main == null) return;
         for (var i = 0; i < transform.childCount; i++)

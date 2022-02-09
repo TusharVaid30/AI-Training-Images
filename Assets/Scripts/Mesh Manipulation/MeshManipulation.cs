@@ -25,7 +25,7 @@ public class MeshManipulation : UpdateMesh
     {
         if (Camera.main == null || !updateBorders) return;
 
-        for (var x = 0; x < resX / 2; x += factorX)
+        for (var x = 0; x < resX; x += factorX)
         {
             for (var y = 0; y < resY; y += factorY)
             {
@@ -67,7 +67,7 @@ public class MeshManipulation : UpdateMesh
             }
         }
         
-        for (var x = resX; x > 960; x -= factorX)
+        for (var x = resX; x > 0; x -= factorX)
         {
             for (var y = resY; y > 0; y -= factorY)
             {

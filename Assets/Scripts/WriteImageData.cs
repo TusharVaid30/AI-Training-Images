@@ -48,14 +48,18 @@ public class WriteImageData : MonoBehaviour
             WriteStringLine("          [");
             for (var x = 0; x < panels.Length; x++)
             {
-                WriteStringLine("               \"Panel Name\": " + "\"" + panels[x].name + "\": ");
-                WriteStringLine("                [");
-                for (var j = 0; j < panels[x].GetComponent<FramesAndCoords>().data[i].Length; j++)
+                if (panels[x].GetComponent<FramesAndCoords>().data.ContainsKey(i))
                 {
-                    WriteString("                       [" + panels[x].GetComponent<FramesAndCoords>().data[i][j]);
-                    WriteStringLine(j == panels[x].GetComponent<FramesAndCoords>().data[i].Length - 1 ? "]" : "],");
+                    WriteStringLine("               \"Panel Name\": " + "\"" + panels[x].name + "\": ");
+                    WriteStringLine("                [");
+                    for (var j = 0; j < panels[x].GetComponent<FramesAndCoords>().data[i].Length; j++)
+                    {
+                        WriteString("                       [" + panels[x].GetComponent<FramesAndCoords>().data[i][j]);
+                        WriteStringLine(j == panels[x].GetComponent<FramesAndCoords>().data[i].Length - 1 ? "]" : "],");
+                    }
+
+                    WriteStringLine("                ]");
                 }
-                WriteStringLine("                ]");
             }
 
             WriteStringLine("          ]");
