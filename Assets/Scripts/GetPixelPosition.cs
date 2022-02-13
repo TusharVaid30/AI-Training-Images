@@ -74,12 +74,12 @@ public class GetPixelPosition : MonoBehaviour
             return;
         }
 
-        if (framesDone < 500)
+        if (framesDone < 150)
         {
             frontBumper.GetComponent<MeshManipulation>().updateBorders = true;
             frontBumper.GetComponent<AlignPoints>().align = true;
         }
-        else if (framesDone is >= 500 and < 1000)
+        else if (framesDone is >= 150 and < 300)
         {
             rightHeadlight.GetComponent<MeshManipulation>().updateBorders = false;
 
@@ -88,14 +88,14 @@ public class GetPixelPosition : MonoBehaviour
             foreach (var frontPanel in frontPanels)
                 frontPanel.GetComponent<StoreData>().dontStore = true;
         }
-        else if (framesDone is >= 1000 and < 1500)
+        else if (framesDone is >= 300 and < 450)
         {
             hood.GetComponent<MeshManipulation>().updateBorders = false;
             rearBumper.GetComponent<MeshManipulation>().updateBorders = true;
             rearBumper.GetComponent<AlignPoints>().align = true;
             rightORVM.GetComponent<MeshManipulation>().updateBorders = false;
         }
-        else if (framesDone is >= 1500 and < 2000)
+        else if (framesDone is >= 450 and < 600)
         {
             trunk.GetComponent<MeshManipulation>().updateBorders = true;
             trunk.GetComponent<AlignPoints>().align = true;
@@ -107,7 +107,7 @@ public class GetPixelPosition : MonoBehaviour
             leftHeadlight.GetComponent<MeshManipulation>().updateBorders = false;
             leftORVM.GetComponent<MeshManipulation>().updateBorders = false;
         }
-        else if (framesDone >= 2000)
+        else if (framesDone >= 600)
         {
             rightTaillight.GetComponent<MeshManipulation>().updateBorders = true;
             rightTaillight.GetComponent<AlignPoints>().align = true;

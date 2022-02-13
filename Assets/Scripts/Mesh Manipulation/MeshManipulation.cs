@@ -12,10 +12,14 @@ public class MeshManipulation : UpdateMesh
     [SerializeField] private int factorY;
     [SerializeField] private int resX;
     [SerializeField] private int resY;
-
+    [SerializeField] private List<Transform> colliders;
+    
+    
     private AlignPoints alignPoint;
     private List<int> hitPoints1 = new List<int>();
     private List<int> hitPoints2 = new List<int>();
+    private List<int> hitPoints3 = new List<int>();
+    private List<int> hitPoints4 = new List<int>();
 
     private void Start()
     {
@@ -37,11 +41,19 @@ public class MeshManipulation : UpdateMesh
                     RaycastHit hit;
                     if (Physics.Raycast(ray, out hit))
                     {
+                        if (colliders.Count > 0)
+                            foreach (var collider1 in colliders)
+                                if (hit.transform == collider1)
+                                {
+                                    Spawn(hit.point);
+                                    hitPoints1.Add(y);
+                                }
                         if (hit.transform == transform)
                         {
                             Spawn(hit.point);
                             hitPoints1.Add(y);
                         }
+        
                     }
                 }
             }
@@ -51,17 +63,24 @@ public class MeshManipulation : UpdateMesh
         {
             for (var x = 0; x < resX; x += factorX)
             {
-                if (!hitPoints1.Contains(x))
+                if (!hitPoints2.Contains(x))
                 {
                     var ray = Camera.main.ScreenPointToRay(new Vector2(x, y));
         
                     RaycastHit hit;
                     if (Physics.Raycast(ray, out hit))
                     {
+                        if (colliders.Count > 0)
+                            foreach (var collider1 in colliders)
+                                if (hit.transform == collider1)
+                                {
+                                    Spawn(hit.point);
+                                    hitPoints2.Add(x);
+                                }
                         if (hit.transform == transform)
                         {
                             Spawn(hit.point);
-                            hitPoints1.Add(x);
+                            hitPoints2.Add(x);
                         }
                     }
                 }
@@ -72,17 +91,24 @@ public class MeshManipulation : UpdateMesh
         {
             for (var y = resY; y > 0; y -= factorY)
             {
-                if (!hitPoints2.Contains(y))
+                if (!hitPoints3.Contains(y))
                 {
                     var ray = Camera.main.ScreenPointToRay(new Vector2(x, y));
         
                     RaycastHit hit;
                     if (Physics.Raycast(ray, out hit))
                     {
+                        if (colliders.Count > 0)
+                            foreach (var collider1 in colliders)
+                                if (hit.transform == collider1)
+                                {
+                                    Spawn(hit.point);
+                                    hitPoints3.Add(y);
+                                }
                         if (hit.transform == transform)
                         {
                             Spawn(hit.point);
-                            hitPoints2.Add(y);
+                            hitPoints3.Add(y);
                         }
                     }
                 }
@@ -93,17 +119,24 @@ public class MeshManipulation : UpdateMesh
         {
             for (var x = resX; x > 0; x -= factorX)
             {
-                if (!hitPoints2.Contains(x))
+                if (!hitPoints4.Contains(x))
                 {
                     var ray = Camera.main.ScreenPointToRay(new Vector2(x, y));
         
                     RaycastHit hit;
                     if (Physics.Raycast(ray, out hit))
                     {
+                        if (colliders.Count > 0)
+                            foreach (var collider1 in colliders)
+                                if (hit.transform == collider1)
+                                {
+                                    Spawn(hit.point);
+                                    hitPoints4.Add(x);
+                                }
                         if (hit.transform == transform)
                         {
                             Spawn(hit.point);
-                            hitPoints2.Add(x);
+                            hitPoints4.Add(x);
                         }
                     }
                 }

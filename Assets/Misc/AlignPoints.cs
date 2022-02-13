@@ -47,7 +47,7 @@ namespace Misc_
             for (var i = transform.childCount - 1; i > transform.childCount - 5; i--)
             {
                 try
-                {
+                { 
                     Destroy(transform.GetChild(i).gameObject);
                 }
                 catch (UnityException e)
