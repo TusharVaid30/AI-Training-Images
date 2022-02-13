@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class StoreData : MonoBehaviour
 {
+    public bool dontStore;
+    
     private FramesAndCoords framesAndCoords;
     
     private List<Vector2> temp = new List<Vector2>();
@@ -17,6 +19,7 @@ public class StoreData : MonoBehaviour
 
     public void Store(int frame)
     {
+        if (dontStore) return;
         if (transform.childCount == 0) return;
         var positions = new Vector2[transform.childCount];
         if (Camera.main == null) return;

@@ -5,12 +5,13 @@ using UnityEngine;
 
 public class MeshManipulation : UpdateMesh
 {
+    public bool updateBorders = true;
+    
     [SerializeField] private GameObject sphere;
     [SerializeField] private int factorX;
     [SerializeField] private int factorY;
     [SerializeField] private int resX;
     [SerializeField] private int resY;
-    [SerializeField] private bool updateBorders = true;
 
     private AlignPoints alignPoint;
     private List<int> hitPoints1 = new List<int>();
@@ -103,7 +104,6 @@ public class MeshManipulation : UpdateMesh
                         {
                             Spawn(hit.point);
                             hitPoints2.Add(x);
-                            print("test");
                         }
                     }
                 }

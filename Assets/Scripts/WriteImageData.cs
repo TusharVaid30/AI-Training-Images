@@ -25,7 +25,6 @@ public class WriteImageData : MonoBehaviour
     private void Update()
     {
         if (pixelPosition.framesDone < data.numberOfFrames || stopWriting) return;
-        print(panels[7].GetComponent<FramesAndCoords>().data[1][0]);
         SetupData();
         stopWriting = true;
     }
@@ -43,26 +42,27 @@ public class WriteImageData : MonoBehaviour
         for (var i = 0; i <= data.numberOfFrames - 1; i++)
         {
             WriteStringLine("     [");
-            WriteStringLine("     {\"img_name\"   :    " + "\""+ (i + 1) + ".png\":");
+            WriteStringLine("     {" + "\""+ (i + 1) + ".png\":");
 
-            WriteStringLine("          [");
+            WriteStringLine("          [{");
             for (var x = 0; x < panels.Length; x++)
             {
                 if (panels[x].GetComponent<FramesAndCoords>().data.ContainsKey(i))
                 {
-                    WriteStringLine("               \"Panel Name\": " + "\"" + panels[x].name + "\": ");
+                    WriteStringLine("               \"" + panels[x].name + "\": ");
                     WriteStringLine("                [");
                     for (var j = 0; j < panels[x].GetComponent<FramesAndCoords>().data[i].Length; j++)
                     {
-                        WriteString("                       [" + panels[x].GetComponent<FramesAndCoords>().data[i][j]);
+                        WriteString("                       [" + panels[x].GetComponent<FramesAndCoords>().data[i][j].x + ", " + 
+                                    panels[x].GetComponent<FramesAndCoords>().data[i][j].y);
                         WriteStringLine(j == panels[x].GetComponent<FramesAndCoords>().data[i].Length - 1 ? "]" : "],");
                     }
 
-                    WriteStringLine("                ]");
+                    WriteStringLine(x == panels.Length - 1 ? "              ]" : "            ],");
                 }
             }
 
-            WriteStringLine("          ]");
+            WriteStringLine("          }]");
 
             WriteStringLine("      }");
             WriteStringLine(i == data.numberOfFrames - 1 ? "     ]" : "     ],");
