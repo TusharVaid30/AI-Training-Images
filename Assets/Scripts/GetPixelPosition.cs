@@ -11,7 +11,6 @@ public class GetPixelPosition : MonoBehaviour
     [SerializeField] private new GameObject camera;
     [SerializeField] private Data data;
     [SerializeField] private Text debugText;
-    [SerializeField] private Transform[] points;
     [SerializeField] private Transform frontBumper;
     [SerializeField] private Transform rearBumper;
     [SerializeField] private Transform rightORVM;
@@ -75,24 +74,17 @@ public class GetPixelPosition : MonoBehaviour
             return;
         }
 
-        if (pointIndex == points.Length)
-            pointIndex = 0;
-
         if (framesDone < 500)
-        {
-            for (var i = 0; i < frontBumper.childCount; i++)
-                frontBumper.GetChild(i).parent = points[pointIndex - 1];
-            while (points[pointIndex].childCount > 0)
-                points[pointIndex].GetChild(points[pointIndex].childCount - 1).SetParent(frontBumper);
-        }
-        else if (framesDone is >= 500 and < 1000)
         {
             frontBumper.GetComponent<MeshManipulation>().updateBorders = true;
             frontBumper.GetComponent<AlignPoints>().align = true;
+        }
+        else if (framesDone is >= 500 and < 1000)
+        {
             rightHeadlight.GetComponent<MeshManipulation>().updateBorders = false;
 
-            foreach (var bumperSidePanel in sidePanels)
-                bumperSidePanel.GetComponent<StoreData>().dontStore = false;
+            foreach (var sidePanel in sidePanels)
+                sidePanel.GetComponent<StoreData>().dontStore = false;
             foreach (var frontPanel in frontPanels)
                 frontPanel.GetComponent<StoreData>().dontStore = true;
         }
@@ -139,12 +131,5 @@ public class GetPixelPosition : MonoBehaviour
         foreach (var storeData in storeDatas)
             storeData.Store(framesDone - 1);
         
-        if (framesDone < 60)
-        {
-            for (var i = 0; i < points[pointIndex - 1].childCount; i++)
-                points[pointIndex - 2].GetChild(i).parent = frontBumper;
-            while (frontBumper.childCount > 0)
-                frontBumper.GetChild(frontBumper.childCount - 1).SetParent(points[pointIndex - 1]);
-        }
     }
 }
