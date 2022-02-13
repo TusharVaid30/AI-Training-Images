@@ -11,7 +11,6 @@ public class GetPixelPosition : MonoBehaviour
     [SerializeField] private new GameObject camera;
     [SerializeField] private Data data;
     [SerializeField] private Text debugText;
-    [SerializeField] private Animator car;
     [SerializeField] private Transform[] points;
     [SerializeField] private Transform frontBumper;
     [SerializeField] private Transform rearBumper;
