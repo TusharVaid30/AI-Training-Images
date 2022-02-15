@@ -146,6 +146,8 @@ public class MeshManipulation : UpdateMesh
         alignPoint.Align();
         hitPoints1.Clear();
         hitPoints2.Clear();
+        hitPoints3.Clear();
+        hitPoints4.Clear();
     }
 
     private void Spawn(Vector3 position)
