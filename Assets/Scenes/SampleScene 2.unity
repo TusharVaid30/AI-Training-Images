@@ -48644,7 +48644,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f4020e07ba945c44bbb644bdca26406, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  updateBorders: 1
+  updateBorders: 0
   sphere: {fileID: 4741621872317803424, guid: 956ac2e0e505c49409d63ec8b1d6e347, type: 3}
   factorX: 10
   factorY: 10
@@ -59788,8 +59788,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   updateBorders: 1
   sphere: {fileID: 4741621872317803424, guid: 956ac2e0e505c49409d63ec8b1d6e347, type: 3}
-  factorX: 10
-  factorY: 10
+  factorX: 5
+  factorY: 5
   resX: 1920
   resY: 1080
   colliders: []
@@ -64391,8 +64391,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   updateBorders: 1
   sphere: {fileID: 4741621872317803424, guid: 956ac2e0e505c49409d63ec8b1d6e347, type: 3}
-  factorX: 10
-  factorY: 10
+  factorX: 5
+  factorY: 5
   resX: 1920
   resY: 1080
   colliders: []
@@ -66861,7 +66861,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f4020e07ba945c44bbb644bdca26406, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  updateBorders: 1
+  updateBorders: 0
   sphere: {fileID: 4741621872317803424, guid: 956ac2e0e505c49409d63ec8b1d6e347, type: 3}
   factorX: 10
   factorY: 10
