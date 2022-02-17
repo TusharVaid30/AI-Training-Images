@@ -7,6 +7,7 @@ TagManager:
   - Bumper
   - AUTOMESH
   - Front Bumper
+  - Rear Bumper
   layers:
   - Default
   - TransparentFX
