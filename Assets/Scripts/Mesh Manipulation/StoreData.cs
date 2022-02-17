@@ -37,6 +37,9 @@ public class StoreData : MonoBehaviour
         //     if (transform.name == "Grill" && position.x > 1500f)
         //         print(position);
         // } = positions;
+        
+        if (transform.name == "Rear Bumper")
+            print("XXXXXXXXXXXXXXXXXXXXX");
         StartCoroutine(Delay());        
     }
 

@@ -38,11 +38,11 @@ public class WriteImageData : MonoBehaviour
     private void SetupData()
     {
         WriteStringLine("{");
-        WriteStringLine("     \"data\":" + " [");
+        WriteStringLine("     \"sedan1\":" + " [");
         for (var i = 0; i <= data.numberOfFrames - 1; i++)
         {
             WriteStringLine("     [");
-            WriteStringLine("     {" + "\""+ (i + 1) + ".png\":");
+            WriteStringLine("     {" + "\"sedan1_"+ (i + 1) + ".png\":");
 
             WriteStringLine("          [{");
             for (var x = 0; x < panels.Length; x++)

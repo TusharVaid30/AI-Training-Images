@@ -79,11 +79,11 @@ public class MeshManipulation : UpdateMesh
             for (var y = (int) bottomLeft.y; y < topRight.y; y += factorY)
             {
                 var ray = Camera.main.ScreenPointToRay(new Vector2(x, y));
-
+        
                 RaycastHit hit;
                 if (Physics.Raycast(ray, out hit))
                 {
-                    if (hit.transform.CompareTag(transform.name) || hit.transform == transform)
+                    if ((hit.transform.CompareTag("Front Bumper") && transform.name == "Front Bumper") || hit.transform == transform)
                     {
                         if (!hitPoints1.Contains(y))
                         {
@@ -102,7 +102,7 @@ public class MeshManipulation : UpdateMesh
                     if (hitPoints1.Contains(y))
                         hitPoints1.Remove(y);
                 }
-
+        
             }
         }
         
@@ -111,11 +111,11 @@ public class MeshManipulation : UpdateMesh
             for (var x = (int) bottomLeft.x; x < topRight.x; x += factorX)
             {
                 var ray = Camera.main.ScreenPointToRay(new Vector2(x, y));
-
+        
                 RaycastHit hit;
                 if (Physics.Raycast(ray, out hit))
                 {
-                    if (hit.transform.CompareTag(transform.name) || hit.transform == transform)
+                    if ((hit.transform.CompareTag("Front Bumper") && transform.name == "Front Bumper") || hit.transform == transform)
                     {
                         if (!hitPoints2.Contains(x))
                         {
@@ -142,11 +142,11 @@ public class MeshManipulation : UpdateMesh
             for (var y = (int) topRight.y; y > bottomLeft.y; y -= factorY)
             {
                 var ray = Camera.main.ScreenPointToRay(new Vector2(x, y));
-
+        
                 RaycastHit hit;
                 if (Physics.Raycast(ray, out hit))
                 {
-                    if (hit.transform == transform || hit.transform.CompareTag(transform.name))
+                    if (hit.transform == transform || (hit.transform.CompareTag("Front Bumper") && transform.name == "Front Bumper"))
                     {
                         if (!hitPoints3.Contains(y))
                         {
@@ -168,16 +168,16 @@ public class MeshManipulation : UpdateMesh
             }
         }
         
-        for (var y = (int) topRight.y; y > topRight.y / 2; y -= factorY)
+        for (var y = (int) topRight.y; y > bottomLeft.y; y -= factorY)
         {
             for (var x = (int) topRight.x; x > bottomLeft.x; x -= factorX)
             {
                 var ray = Camera.main.ScreenPointToRay(new Vector2(x, y));
-
+        
                 RaycastHit hit;
                 if (Physics.Raycast(ray, out hit))
                 {
-                    if (hit.transform.CompareTag(transform.name) || hit.transform == transform)
+                    if ((hit.transform.CompareTag("Front Bumper") && transform.name == "Front Bumper") || hit.transform == transform)
                     {
                         if (!hitPoints4.Contains(x))
                         {
@@ -198,7 +198,6 @@ public class MeshManipulation : UpdateMesh
                 }
             }
         }
-        
         alignPoint.Align();
         hitPoints1.Clear();
         hitPoints2.Clear();
