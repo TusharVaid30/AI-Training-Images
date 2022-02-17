@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fd5548f2993236488a22dce399829b2, type: 3}
   m_Name: Data
   m_EditorClassIdentifier: 
-  numberOfFrames: 10
-  path: C:\Users\tusha\Documents\Blender\Projects\Panel Segmentation\Hyundai.json
+  numberOfFrames: 750
+  path: C:\Users\tusha\Documents\Blender\Projects\Panel Segmentation\More Cars\MUV
+    2\Hyundai.json

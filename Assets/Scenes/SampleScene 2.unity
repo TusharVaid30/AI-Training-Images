@@ -40383,7 +40383,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a672c74ea17b2b34b93bbd6f6e2caf75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dontStore: 1
+  dontStore: 0
 --- !u!114 &5135921049796915594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46094,6 +46094,7 @@ GameObject:
   - component: {fileID: 940218686522208923}
   - component: {fileID: 1741424462668786580}
   - component: {fileID: 5079485877081212316}
+  - component: {fileID: 5799459308704195553}
   m_Layer: 0
   m_Name: cc1
   m_TagString: Untagged
@@ -46101,6 +46102,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &5799459308704195553
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5799459308704195552}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4493789514570604179, guid: b4d7de5d701b59643911ee294ce49f24, type: 3}
 --- !u!4 &5799892667582179673
 Transform:
   m_ObjectHideFlags: 0
@@ -58784,6 +58799,7 @@ GameObject:
   - component: {fileID: 2896774117098187390}
   - component: {fileID: 6943524327147987394}
   - component: {fileID: 3068908915850927183}
+  - component: {fileID: 7456790793461664217}
   m_Layer: 0
   m_Name: m1.001
   m_TagString: Untagged
@@ -58791,6 +58807,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &7456790793461664217
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7456790793461664216}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 7349299282018461708, guid: b4d7de5d701b59643911ee294ce49f24, type: 3}
 --- !u!4 &7459948417274481975
 Transform:
   m_ObjectHideFlags: 0
@@ -64613,7 +64643,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a672c74ea17b2b34b93bbd6f6e2caf75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dontStore: 1
+  dontStore: 0
 --- !u!114 &8177716932946799063
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67032,7 +67062,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a672c74ea17b2b34b93bbd6f6e2caf75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dontStore: 1
+  dontStore: 0
 --- !u!114 &8457267496891287323
 MonoBehaviour:
   m_ObjectHideFlags: 0
