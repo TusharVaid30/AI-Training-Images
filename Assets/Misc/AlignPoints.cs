@@ -61,7 +61,7 @@ namespace Misc_
             {
                 try
                 {
-                   // Destroy(transform.GetChild(i).gameObject);
+                    Destroy(transform.GetChild(i).gameObject);
                 }
                 catch (UnityException e)
                 {
