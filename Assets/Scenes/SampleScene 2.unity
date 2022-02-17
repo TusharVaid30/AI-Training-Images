@@ -31112,6 +31112,7 @@ GameObject:
   - component: {fileID: 3565258884735688383}
   - component: {fileID: 858536903557734938}
   - component: {fileID: 1770350979328091090}
+  - component: {fileID: 3565258884735688384}
   m_Layer: 0
   m_Name: boot_dam01_001
   m_TagString: Untagged
@@ -31365,6 +31366,20 @@ Transform:
   m_Father: {fileID: 543450652853254790}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &3565258884735688384
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3525047527809685244}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -4744737532124450154, guid: 9c04ea86a07dd2c42bf5fec8e6250598, type: 3}
 --- !u!33 &3568023560035215815
 MeshFilter:
   m_ObjectHideFlags: 0
