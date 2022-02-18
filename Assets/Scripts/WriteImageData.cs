@@ -42,7 +42,7 @@ public class WriteImageData : MonoBehaviour
         for (var i = 0; i <= data.numberOfFrames - 1; i++)
         {
             WriteStringLine("     [");
-            WriteStringLine("     {" + "\""+ (i + 1) + ".png\":");
+            WriteStringLine("     {" + "\"muv3_"+ (i + 1) + ".png\":");
 
             WriteStringLine("          [{");
             for (var x = 0; x < panels.Length; x++)

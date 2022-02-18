@@ -16,7 +16,6 @@ public class MeshManipulation : UpdateMesh
     [SerializeField] private int resY;
     [SerializeField] private List<Transform> colliders;
     
-    
     private AlignPoints alignPoint;
     private List<int> hitPoints1 = new List<int>();
     private List<int> hitPoints2 = new List<int>();
@@ -33,7 +32,7 @@ public class MeshManipulation : UpdateMesh
         alignPoint = GetComponent<AlignPoints>();
     }
 
-    public void FocusOnBounds(Bounds bounds) { 
+    private void FocusOnBounds(Bounds bounds) { 
         Vector3 c = bounds.center;
         Vector3 e = bounds.extents;
  
@@ -54,11 +53,16 @@ public class MeshManipulation : UpdateMesh
         var minX = enumerable.Min(corner => corner.x);
         var maxY = enumerable.Max(corner => corner.y);
         var minY = enumerable.Min(corner => corner.y);
- 
+
+        maxX = Mathf.Clamp(maxX, 0, resX);
+        minX = Mathf.Clamp(minX, 0, resX);
+        maxY = Mathf.Clamp(maxY, 0, resY);
+        minY = Mathf.Clamp(minY, 0, resY);
+        
         topRight = new Vector3(maxX, maxY, 1f);
-        topLeft = new Vector3(minX, maxY, 0);
-        bottomRight = new Vector3(maxX, minY, 0);
-        bottomLeft = new Vector3(minX, minY, 0);
+        topLeft = new Vector3(minX, maxY, 1f);
+        bottomRight = new Vector3(maxX, minY, 1f);
+        bottomLeft = new Vector3(minX, minY, 1f);
     }
     
     public override void UpdateBorders()
@@ -66,17 +70,17 @@ public class MeshManipulation : UpdateMesh
         if (Camera.main == null || !updateBorders) return;
 
         FocusOnBounds(GetComponent<MeshRenderer>().bounds);
-        
-        for (var x = (int) bottomLeft.x; x < topRight.x; x += factorX)
+
+        for (var x = (int) bottomLeft.x; x < topRight.x / 2; x += factorX)
         {
             for (var y = (int) bottomLeft.y; y < topRight.y; y += factorY)
             {
                 var ray = Camera.main.ScreenPointToRay(new Vector2(x, y));
-
+        
                 RaycastHit hit;
                 if (Physics.Raycast(ray, out hit))
                 {
-                    if (hit.transform.CompareTag(transform.name) || hit.transform == transform)
+                    if ((hit.transform.CompareTag("Front Bumper") && transform.name == "Front Bumper") || hit.transform == transform)
                     {
                         if (!hitPoints1.Contains(y))
                         {
@@ -95,20 +99,20 @@ public class MeshManipulation : UpdateMesh
                     if (hitPoints1.Contains(y))
                         hitPoints1.Remove(y);
                 }
-
+        
             }
         }
         
-        for (var y = (int) bottomLeft.y; y < topRight.y; y += factorY)
+        for (var y = (int) bottomLeft.y; y < topRight.y / 2; y += factorY)
         {
             for (var x = (int) bottomLeft.x; x < topRight.x; x += factorX)
             {
                 var ray = Camera.main.ScreenPointToRay(new Vector2(x, y));
-
+        
                 RaycastHit hit;
                 if (Physics.Raycast(ray, out hit))
                 {
-                    if (hit.transform.CompareTag(transform.name) || hit.transform == transform)
+                    if ((hit.transform.CompareTag("Front Bumper") && transform.name == "Front Bumper") || hit.transform == transform)
                     {
                         if (!hitPoints2.Contains(x))
                         {
@@ -130,16 +134,16 @@ public class MeshManipulation : UpdateMesh
             }
         }
         
-        for (var x = (int) topRight.x; x > bottomLeft.x; x -= factorX)
+        for (var x = (int) topRight.x; x > topRight.x / 2; x -= factorX)
         {
             for (var y = (int) topRight.y; y > bottomLeft.y; y -= factorY)
             {
                 var ray = Camera.main.ScreenPointToRay(new Vector2(x, y));
-
+        
                 RaycastHit hit;
                 if (Physics.Raycast(ray, out hit))
                 {
-                    if (hit.transform == transform || hit.transform.CompareTag(transform.name))
+                    if (hit.transform == transform || (hit.transform.CompareTag("Front Bumper") && transform.name == "Front Bumper"))
                     {
                         if (!hitPoints3.Contains(y))
                         {
@@ -166,11 +170,11 @@ public class MeshManipulation : UpdateMesh
             for (var x = (int) topRight.x; x > bottomLeft.x; x -= factorX)
             {
                 var ray = Camera.main.ScreenPointToRay(new Vector2(x, y));
-
+        
                 RaycastHit hit;
                 if (Physics.Raycast(ray, out hit))
                 {
-                    if (hit.transform.CompareTag(transform.name) || hit.transform == transform)
+                    if ((hit.transform.CompareTag("Front Bumper") && transform.name == "Front Bumper") || hit.transform == transform)
                     {
                         if (!hitPoints4.Contains(x))
                         {
@@ -191,7 +195,6 @@ public class MeshManipulation : UpdateMesh
                 }
             }
         }
-        
         alignPoint.Align();
         hitPoints1.Clear();
         hitPoints2.Clear();
@@ -202,5 +205,9 @@ public class MeshManipulation : UpdateMesh
     private void Spawn(Vector3 position)
     {
         Instantiate(sphere, position, Quaternion.identity, transform);
+    }
+    private void Spawn2(Vector3 position)
+    {
+        Instantiate(sphere, Camera.main.ScreenToWorldPoint(position), Quaternion.identity);
     }
 }
