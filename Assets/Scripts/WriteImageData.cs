@@ -6,6 +6,9 @@ using UnityEngine.UI;
 
 public class WriteImageData : MonoBehaviour
 {
+    [SerializeField] private string carName;
+    
+    
     [SerializeField] private Data data;
     [SerializeField] private GetPixelPosition pixelPosition;
     [SerializeField] private Text debugText;
@@ -15,6 +18,8 @@ public class WriteImageData : MonoBehaviour
     private string path;
     private bool stopWriting;
     private StreamWriter writer;
+
+    private int annID;
 
     private void Start()
     {
@@ -38,34 +43,58 @@ public class WriteImageData : MonoBehaviour
     private void SetupData()
     {
         WriteStringLine("{");
-        WriteStringLine("     \"sedan1\":" + " [");
+        WriteStringLine("     \"categories\":" + " [");
+        for (var i = 0; i < panels.Length; i++)
+        {
+            WriteStringLine("       {");
+            WriteStringLine("         \"supercategory\": \"" + panels[i].name + "\",");
+            WriteStringLine("         \"id\":" + i + ",");
+            WriteStringLine("         \"name\": \"" + panels[i].name + "\"");
+            WriteStringLine(i == panels.Length - 1 ? "     }" : "      },");
+        }
+        WriteStringLine("      ],");
+        WriteStringLine("     \"images\":" + " [");
         for (var i = 0; i <= data.numberOfFrames - 1; i++)
         {
-            WriteStringLine("     [");
-            WriteStringLine("     {" + "\"sedan1_"+ (i + 1) + ".png\":");
-
-            WriteStringLine("          [{");
+            WriteStringLine("       {");
+            WriteStringLine("         \"height\":  1080,");
+            WriteStringLine("         \"width\":  1920,");
+            WriteStringLine("         \"id\": " + i + ",");
+            WriteStringLine("         \"name\": \" " + carName + "_" + i + 1 + ".png\"");
+            WriteStringLine(i == data.numberOfFrames - 1 ? "     }" : "      },");
+        }
+        WriteStringLine("     ],");
+        WriteStringLine("     \"annotations\":" + " [");
+        for (var i = 0; i <= data.numberOfFrames - 1; i++)
+        {
+            
             for (var x = 0; x < panels.Length; x++)
             {
                 if (panels[x].GetComponent<FramesAndCoords>().data.ContainsKey(i))
                 {
-                    WriteStringLine("               \"" + panels[x].name + "\": ");
-                    WriteStringLine("                [");
+                    WriteStringLine("        {");
+                    WriteStringLine("           \"iscrowd\": 0,");
+                    WriteStringLine("           \"image_id\":" + i +",");
+            
+                    WriteStringLine("          \"segmentation\" : [");
+                    WriteStringLine("           [");
                     for (var j = 0; j < panels[x].GetComponent<FramesAndCoords>().data[i].Length; j++)
                     {
-                        WriteString("                       [" + panels[x].GetComponent<FramesAndCoords>().data[i][j].x + ", " + 
+                        WriteString("                       " + panels[x].GetComponent<FramesAndCoords>().data[i][j].x + ", " + 
                                     panels[x].GetComponent<FramesAndCoords>().data[i][j].y);
-                        WriteStringLine(j == panels[x].GetComponent<FramesAndCoords>().data[i].Length - 1 ? "]" : "],");
-                    }
 
-                    WriteStringLine(x == panels.Length - 1 ? "              ]" : "            ],");
+                        WriteStringLine(x == panels[x].GetComponent<FramesAndCoords>().data[i].Length - 1 ? "" : ",");
+                    }
+                    WriteStringLine("            ]");
+                    WriteStringLine("        ],");
+                    WriteStringLine("           \"category_id\":" + x + ",");
+                    WriteStringLine("           \"id\":" + annID + ",");
+                    WriteStringLine("           \"area\": 2073600");
+                    WriteStringLine(x == panels.Length - 1 ? "        }" : "     },");
+                    
+                    annID++;
                 }
             }
-
-            WriteStringLine("          }]");
-
-            WriteStringLine("      }");
-            WriteStringLine(i == data.numberOfFrames - 1 ? "     ]" : "     ],");
         }
 
         WriteStringLine("]}");
