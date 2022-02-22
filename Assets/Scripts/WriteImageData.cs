@@ -6,6 +6,9 @@ using UnityEngine.UI;
 
 public class WriteImageData : MonoBehaviour
 {
+    [SerializeField] private string carName;
+    
+    
     [SerializeField] private Data data;
     [SerializeField] private GetPixelPosition pixelPosition;
     [SerializeField] private Text debugText;
@@ -57,7 +60,7 @@ public class WriteImageData : MonoBehaviour
             WriteStringLine("         \"height\":  1080,");
             WriteStringLine("         \"width\":  1920,");
             WriteStringLine("         \"id\": " + i + ",");
-            WriteStringLine("         \"name\": \"muv3_" + i + 1 + ".png\"");
+            WriteStringLine("         \"name\": \" " + carName + "_" + i + 1 + ".png\"");
             WriteStringLine(i == data.numberOfFrames - 1 ? "     }" : "      },");
         }
         WriteStringLine("     ],");
