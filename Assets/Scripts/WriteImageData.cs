@@ -60,7 +60,7 @@ public class WriteImageData : MonoBehaviour
             WriteStringLine("         \"height\":  1080,");
             WriteStringLine("         \"width\":  1920,");
             WriteStringLine("         \"id\": " + i + ",");
-            WriteStringLine("         \"name\": \" " + carName + "_" + i + 1 + ".png\"");
+            WriteStringLine("         \"name\": \" " + carName + "_" + (i + 1) + ".png\"");
             WriteStringLine(i == data.numberOfFrames - 1 ? "     }" : "      },");
         }
         WriteStringLine("     ],");
@@ -83,7 +83,7 @@ public class WriteImageData : MonoBehaviour
                         WriteString("                       " + panels[x].GetComponent<FramesAndCoords>().data[i][j].x + ", " + 
                                     panels[x].GetComponent<FramesAndCoords>().data[i][j].y);
 
-                        WriteStringLine(x == panels[x].GetComponent<FramesAndCoords>().data[i].Length - 1 ? "" : ",");
+                        WriteStringLine(j == panels[x].GetComponent<FramesAndCoords>().data[i].Length - 1 ? "" : ",");
                     }
                     WriteStringLine("            ]");
                     WriteStringLine("        ],");
