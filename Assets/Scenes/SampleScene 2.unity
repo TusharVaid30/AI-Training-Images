@@ -1706,6 +1706,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d0126cf40eefd247aeda1ccd2726549, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  carName: muv1
   data: {fileID: 11400000, guid: 21122a0af35f93f4b96daaeb38253a4b, type: 2}
   pixelPosition: {fileID: 1047038094}
   debugText: {fileID: 1033684475}
