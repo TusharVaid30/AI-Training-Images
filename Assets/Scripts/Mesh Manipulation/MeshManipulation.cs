@@ -5,9 +5,12 @@ using Misc_;
 using UnityEditor;
 using UnityEngine;
 
+[RequireComponent(typeof(AlignPoints), typeof(StoreData), typeof(FramesAndCoords))]
 public class MeshManipulation : UpdateMesh
 {
     public bool updateBorders = true;
+
+    [SerializeField] private LayerMask ignore;
     
     [SerializeField] private GameObject sphere;
     [SerializeField] private int factorX;
@@ -70,6 +73,9 @@ public class MeshManipulation : UpdateMesh
         if (Camera.main == null || !updateBorders) return;
 
         FocusOnBounds(GetComponent<MeshRenderer>().bounds);
+        
+        if (transform.name == "left_fog_lamp")
+            print(bottomLeft.x);
 
         for (var x = (int) bottomLeft.x; x < topRight.x; x += factorX)
         {
@@ -78,7 +84,7 @@ public class MeshManipulation : UpdateMesh
                 var ray = Camera.main.ScreenPointToRay(new Vector2(x, y));
         
                 RaycastHit hit;
-                if (Physics.Raycast(ray, out hit))
+                if (Physics.Raycast(ray, out hit, Mathf.Infinity, ~ignore))
                 {
                     if ((hit.transform.CompareTag("Front Bumper") && transform.name == "Front Bumper") || hit.transform == transform)
                     {
@@ -110,7 +116,7 @@ public class MeshManipulation : UpdateMesh
                 var ray = Camera.main.ScreenPointToRay(new Vector2(x, y));
         
                 RaycastHit hit;
-                if (Physics.Raycast(ray, out hit))
+                if (Physics.Raycast(ray, out hit, Mathf.Infinity, ~ignore))
                 {
                     if ((hit.transform.CompareTag("Front Bumper") && transform.name == "Front Bumper") || hit.transform == transform)
                     {
@@ -134,14 +140,14 @@ public class MeshManipulation : UpdateMesh
             }
         }
         
-        for (var x = (int) topRight.x; x > topRight.x; x -= factorX)
+        for (var x = (int) topRight.x; x > bottomLeft.x; x -= factorX)
         {
             for (var y = (int) topRight.y; y > bottomLeft.y; y -= factorY)
             {
                 var ray = Camera.main.ScreenPointToRay(new Vector2(x, y));
         
                 RaycastHit hit;
-                if (Physics.Raycast(ray, out hit))
+                if (Physics.Raycast(ray, out hit, Mathf.Infinity, ~ignore))
                 {
                     if (hit.transform == transform || (hit.transform.CompareTag("Front Bumper") && transform.name == "Front Bumper"))
                     {
@@ -172,7 +178,7 @@ public class MeshManipulation : UpdateMesh
                 var ray = Camera.main.ScreenPointToRay(new Vector2(x, y));
         
                 RaycastHit hit;
-                if (Physics.Raycast(ray, out hit))
+                if (Physics.Raycast(ray, out hit, Mathf.Infinity, ~ignore))
                 {
                     if ((hit.transform.CompareTag("Front Bumper") && transform.name == "Front Bumper") || hit.transform == transform)
                     {
