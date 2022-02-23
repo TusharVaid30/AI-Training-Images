@@ -80,7 +80,7 @@ public class MeshManipulation : UpdateMesh
                 RaycastHit hit;
                 if (Physics.Raycast(ray, out hit))
                 {
-                    if ((hit.transform.CompareTag("Front Bumper") && transform.name == "Front Bumper") || hit.transform == transform)
+                    if ((hit.transform.CompareTag("Front Bumper") && transform.name == "front_bumper") || hit.transform == transform)
                     {
                         if (!hitPoints1.Contains(y))
                         {
@@ -103,7 +103,7 @@ public class MeshManipulation : UpdateMesh
             }
         }
         
-        for (var y = (int) bottomLeft.y; y < topRight.y / 2; y += factorY)
+        for (var y = (int) bottomLeft.y; y < topRight.y; y += factorY)
         {
             for (var x = (int) bottomLeft.x; x < topRight.x; x += factorX)
             {
@@ -112,7 +112,7 @@ public class MeshManipulation : UpdateMesh
                 RaycastHit hit;
                 if (Physics.Raycast(ray, out hit))
                 {
-                    if ((hit.transform.CompareTag("Front Bumper") && transform.name == "Front Bumper") || hit.transform == transform)
+                    if ((hit.transform.CompareTag("Front Bumper") && transform.name == "front_bumper") || hit.transform == transform)
                     {
                         if (!hitPoints2.Contains(x))
                         {
@@ -134,7 +134,7 @@ public class MeshManipulation : UpdateMesh
             }
         }
         
-        for (var x = (int) topRight.x; x > topRight.x / 2; x -= factorX)
+        for (var x = (int) topRight.x; x > bottomLeft.x; x -= factorX)
         {
             for (var y = (int) topRight.y; y > bottomLeft.y; y -= factorY)
             {
@@ -143,7 +143,7 @@ public class MeshManipulation : UpdateMesh
                 RaycastHit hit;
                 if (Physics.Raycast(ray, out hit))
                 {
-                    if (hit.transform == transform || (hit.transform.CompareTag("Front Bumper") && transform.name == "Front Bumper"))
+                    if (hit.transform == transform || (hit.transform.CompareTag("Front Bumper") && transform.name == "front_bumper"))
                     {
                         if (!hitPoints3.Contains(y))
                         {
@@ -174,7 +174,7 @@ public class MeshManipulation : UpdateMesh
                 RaycastHit hit;
                 if (Physics.Raycast(ray, out hit))
                 {
-                    if ((hit.transform.CompareTag("Front Bumper") && transform.name == "Front Bumper") || hit.transform == transform)
+                    if ((hit.transform.CompareTag("Front Bumper") && transform.name == "front_bumper") || hit.transform == transform)
                     {
                         if (!hitPoints4.Contains(x))
                         {
