@@ -86,7 +86,7 @@ public class MeshManipulation : UpdateMesh
                 RaycastHit hit;
                 if (Physics.Raycast(ray, out hit, Mathf.Infinity, ~ignore))
                 {
-                    if ((hit.transform.CompareTag("Front Bumper") && transform.name == "Front Bumper") || hit.transform == transform)
+                    if ((!hit.transform.CompareTag("Front Bumper") && transform.name == "Front Bumper") || hit.transform == transform)
                     {
                         if (!hitPoints1.Contains(y))
                         {
