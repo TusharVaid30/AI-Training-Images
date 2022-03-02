@@ -923,7 +923,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0093953b8d275ea498349ebff8bd487d, type: 3}
       propertyPath: m_Name
-      value: Front Bumper
+      value: front_bumper
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0093953b8d275ea498349ebff8bd487d, type: 3}
       propertyPath: m_Layer
@@ -22572,7 +22572,7 @@ GameObject:
   - component: {fileID: 6261297711656588192}
   - component: {fileID: 6261297711656588193}
   m_Layer: 0
-  m_Name: Hood
+  m_Name: hood
   m_TagString: AUTOMESH
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -56910,7 +56910,7 @@ GameObject:
   - component: {fileID: 7715459641754686811}
   - component: {fileID: 7715459641754686812}
   m_Layer: 0
-  m_Name: Left ORVM
+  m_Name: left_orvm
   m_TagString: AUTOMESH
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -60892,7 +60892,7 @@ GameObject:
   - component: {fileID: 7600378122157789154}
   - component: {fileID: 7600378122157789155}
   m_Layer: 0
-  m_Name: Left Headlight
+  m_Name: left_head_light
   m_TagString: AUTOMESH
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -71073,7 +71073,7 @@ GameObject:
   - component: {fileID: 8777904555544366204}
   - component: {fileID: 8777904555544366205}
   m_Layer: 0
-  m_Name: Right Headlight
+  m_Name: right_head_light
   m_TagString: AUTOMESH
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
