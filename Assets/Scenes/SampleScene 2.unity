@@ -241,7 +241,7 @@ GameObject:
   - component: {fileID: 242860298}
   - component: {fileID: 242860299}
   m_Layer: 0
-  m_Name: Right ORVM
+  m_Name: right_orvm
   m_TagString: AUTOMESH
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2848,7 +2848,7 @@ GameObject:
   - component: {fileID: 8337084544814704222}
   - component: {fileID: 8337084544814704223}
   m_Layer: 0
-  m_Name: Front Door
+  m_Name: front_door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11324,7 +11324,7 @@ GameObject:
   - component: {fileID: 9019184761608830148}
   - component: {fileID: 9019184761608830149}
   m_Layer: 0
-  m_Name: Front Windshield
+  m_Name: front_windshield
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11776,7 +11776,7 @@ GameObject:
   - component: {fileID: 6368857147977853996}
   - component: {fileID: 6368857147977853997}
   m_Layer: 0
-  m_Name: Trunk
+  m_Name: trunk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13311,7 +13311,7 @@ GameObject:
   - component: {fileID: 8282113243183473074}
   - component: {fileID: 8282113243183473075}
   m_Layer: 0
-  m_Name: Fuel Cap
+  m_Name: fuel_cap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16858,7 +16858,7 @@ GameObject:
   - component: {fileID: 6698300945483983120}
   - component: {fileID: 6698300945483983121}
   m_Layer: 0
-  m_Name: Back Door Handle
+  m_Name: back_door_handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20846,7 +20846,7 @@ GameObject:
   - component: {fileID: 8177716932946799064}
   - component: {fileID: 8177716932946799065}
   m_Layer: 0
-  m_Name: Left Taillight
+  m_Name: left_tail_light
   m_TagString: AUTOMESH
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22717,7 +22717,7 @@ GameObject:
   - component: {fileID: 5135921049796915595}
   - component: {fileID: 5135921049796915596}
   m_Layer: 0
-  m_Name: Rear Bumper
+  m_Name: rear_bumper
   m_TagString: AUTOMESH
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25995,7 +25995,7 @@ GameObject:
   - component: {fileID: 9213086010655323568}
   - component: {fileID: 9213086010655323569}
   m_Layer: 0
-  m_Name: Quarter Panel
+  m_Name: quarter_panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28175,7 +28175,7 @@ GameObject:
   - component: {fileID: 8691975519045875455}
   - component: {fileID: 8691975519045875456}
   m_Layer: 0
-  m_Name: Fender
+  m_Name: fender
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -42348,7 +42348,7 @@ GameObject:
   - component: {fileID: 7489055339164612557}
   - component: {fileID: 7489055339164612558}
   m_Layer: 0
-  m_Name: Front Door Window
+  m_Name: front_door_window
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45463,7 +45463,7 @@ GameObject:
   - component: {fileID: 8457267496891287324}
   - component: {fileID: 8457267496891287325}
   m_Layer: 0
-  m_Name: Right Taillight
+  m_Name: right_tail_light
   m_TagString: AUTOMESH
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47120,7 +47120,7 @@ GameObject:
   - component: {fileID: 5830392242586219011}
   - component: {fileID: 5830392242586219012}
   m_Layer: 0
-  m_Name: Back Door
+  m_Name: back_door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -58515,7 +58515,7 @@ GameObject:
   - component: {fileID: 7621846349429519754}
   - component: {fileID: 7621846349429519755}
   m_Layer: 0
-  m_Name: Grill
+  m_Name: grill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -59220,7 +59220,7 @@ GameObject:
   - component: {fileID: 7392607765056016027}
   - component: {fileID: 7392607765056016028}
   m_Layer: 0
-  m_Name: Front Door Handle
+  m_Name: front_door_handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -67461,7 +67461,7 @@ GameObject:
   - component: {fileID: 8389646807339932571}
   - component: {fileID: 8389646807339932572}
   m_Layer: 0
-  m_Name: Rear Windshield
+  m_Name: rear_windshield
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -67894,7 +67894,7 @@ GameObject:
   - component: {fileID: 9040178249686942125}
   - component: {fileID: 9040178249686942126}
   m_Layer: 0
-  m_Name: A-Post
+  m_Name: a_post
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -68403,7 +68403,7 @@ GameObject:
   - component: {fileID: 9082856402677579130}
   - component: {fileID: 9082856402677579131}
   m_Layer: 0
-  m_Name: Running Board
+  m_Name: running_board
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73578,7 +73578,7 @@ GameObject:
   - component: {fileID: 9067345357012838520}
   - component: {fileID: 9067345357012838521}
   m_Layer: 0
-  m_Name: Back Door Window
+  m_Name: back_door_window
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
