@@ -27,7 +27,7 @@ public class GetPixelPosition : MonoBehaviour
     
     private CoordsPerFrame[] coordsPerFrame;
 
-    private const float TIME_TAKEN_PER_FRAME = 1f;
+    private const float TIME_TAKEN_PER_FRAME = .5f;
     private int numberOfFrames;
     private readonly int stateNameHash = Animator.StringToHash("Camera Movement");
     private MeshManipulation[] updateMesh;

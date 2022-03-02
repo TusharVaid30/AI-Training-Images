@@ -3102,9 +3102,7 @@ MonoBehaviour:
   pixelPosition: {fileID: 1047038094}
   debugText: {fileID: 1033684475}
   panels:
-  - {fileID: 2004295577295006367}
   - {fileID: 1578115776285183143}
-  - {fileID: 0}
   - {fileID: 1175566421777884700}
   - {fileID: 2529097525232045182}
   - {fileID: 1094403514835821239}
@@ -3130,6 +3128,9 @@ MonoBehaviour:
   - {fileID: 747764688059293213}
   - {fileID: 1012857757772942954}
   - {fileID: 6587299609203489152}
+  - {fileID: 409822476}
+  - {fileID: 854079618}
+  - {fileID: 2004295577295006367}
   - {fileID: 1048845705}
 --- !u!114 &1047038094
 MonoBehaviour:
@@ -3159,7 +3160,6 @@ MonoBehaviour:
   leftHeadlight: {fileID: 747764688059293213}
   hood: {fileID: 6587299609203489152}
   sidePanels:
-  - {fileID: 2004295577295006367}
   - {fileID: 1578115776285183143}
   - {fileID: 2529097525232045182}
   - {fileID: 1094403514835821239}
@@ -3172,9 +3172,9 @@ MonoBehaviour:
   - {fileID: 7602922711222997443}
   - {fileID: 6329715466971640699}
   - {fileID: 5182100761784013293}
+  - {fileID: 2004295577295006367}
   - {fileID: 1048845705}
   frontPanels:
-  - {fileID: 0}
   - {fileID: 1175566421777884700}
   - {fileID: 2289375110550840652}
   backPanels:
@@ -4776,7 +4776,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 26.71528, y: -178.8977, z: -0.00031858147}
+  m_LocalEulerAnglesHint: {x: 11.649013, y: 15.120363, z: -0.00028080557}
 --- !u!95 &1576491046
 Animator:
   serializedVersion: 4
