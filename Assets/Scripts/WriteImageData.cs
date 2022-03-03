@@ -90,7 +90,7 @@ public class WriteImageData : MonoBehaviour
                     WriteStringLine("           \"category_id\":" + x + ",");
                     WriteStringLine("           \"id\":" + annID + ",");
                     WriteStringLine("           \"area\": 2073600");
-                    WriteStringLine(x == panels.Length - 1 ? "        }" : "     },");
+                    WriteStringLine("     },");
                     
                     annID++;
                 }
