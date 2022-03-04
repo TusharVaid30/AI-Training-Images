@@ -107,7 +107,8 @@ public class WriteImageData : MonoBehaviour
                     WriteStringLine("        ],");
                     WriteStringLine("           \"category_id\":" + x + ",");
                     WriteStringLine("           \"id\":" + annID + ",");
-                    WriteStringLine("           \"area\": 2073600");
+                    WriteStringLine("           \"area\":" + (Mathf.Max(bboxX.ToArray()) - Mathf.Min(bboxX.ToArray())) *
+                        (Mathf.Max(bboxY.ToArray()) - Mathf.Min(bboxY.ToArray())));
                     if (x == panels.Length - 1 && i == data.numberOfFrames - 1)
                         WriteStringLine("     }");
                     else
