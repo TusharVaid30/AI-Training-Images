@@ -73,29 +73,29 @@ public class GetPixelPosition : MonoBehaviour
             DebugStatus("Writing Data to File");
             return;
         }
-
-        if (framesDone < 1)
+        
+        if (framesDone < 150)
         {
             frontBumper.GetComponent<MeshManipulation>().updateBorders = true;
             frontBumper.GetComponent<AlignPoints>().align = true;
         }
-        else if (framesDone is >= 1 and < 2)
+        else if (framesDone is >= 150 and < 300)
         {
             rightHeadlight.GetComponent<MeshManipulation>().updateBorders = false;
-
+        
             foreach (var sidePanel in sidePanels)
                 sidePanel.GetComponent<StoreData>().dontStore = false;
             foreach (var frontPanel in frontPanels)
                 frontPanel.GetComponent<StoreData>().dontStore = true;
         }
-        else if (framesDone is >= 2 and < 3)
+        else if (framesDone is >= 300 and < 450)
         {
             hood.GetComponent<MeshManipulation>().updateBorders = false;
             rearBumper.GetComponent<MeshManipulation>().updateBorders = true;
             rearBumper.GetComponent<AlignPoints>().align = true;
             rightORVM.GetComponent<MeshManipulation>().updateBorders = false;
         }
-        if (framesDone is >= 2 and < 3)
+        else if (framesDone is >= 450 and < 600)
         {
             // trunk.GetComponent<MeshManipulation>().updateBorders = true;
             // trunk.GetComponent<AlignPoints>().align = true;
@@ -107,60 +107,16 @@ public class GetPixelPosition : MonoBehaviour
             leftHeadlight.GetComponent<MeshManipulation>().updateBorders = false;
             leftORVM.GetComponent<MeshManipulation>().updateBorders = false;
         }
-        if (framesDone >= 2)
+        else if (framesDone >= 600)
         {
             rightTaillight.GetComponent<MeshManipulation>().updateBorders = true;
             rightTaillight.GetComponent<AlignPoints>().align = true;
             foreach (var bumperSidePanel in sidePanels)
                 bumperSidePanel.GetComponent<StoreData>().dontStore = true;
-
+        
             foreach (var backPanel in backPanels)
                 backPanel.GetComponent<StoreData>().dontStore = false;
         }
-        
-        // if (framesDone < 150)
-        // {
-        //     frontBumper.GetComponent<MeshManipulation>().updateBorders = true;
-        //     frontBumper.GetComponent<AlignPoints>().align = true;
-        // }
-        // else if (framesDone is >= 150 and < 300)
-        // {
-        //     rightHeadlight.GetComponent<MeshManipulation>().updateBorders = false;
-        //
-        //     foreach (var sidePanel in sidePanels)
-        //         sidePanel.GetComponent<StoreData>().dontStore = false;
-        //     foreach (var frontPanel in frontPanels)
-        //         frontPanel.GetComponent<StoreData>().dontStore = true;
-        // }
-        // else if (framesDone is >= 300 and < 450)
-        // {
-        //     hood.GetComponent<MeshManipulation>().updateBorders = false;
-        //     rearBumper.GetComponent<MeshManipulation>().updateBorders = true;
-        //     rearBumper.GetComponent<AlignPoints>().align = true;
-        //     rightORVM.GetComponent<MeshManipulation>().updateBorders = false;
-        // }
-        // else if (framesDone is >= 450 and < 600)
-        // {
-        //     // trunk.GetComponent<MeshManipulation>().updateBorders = true;
-        //     // trunk.GetComponent<AlignPoints>().align = true;
-        //     leftTaillight.GetComponent<MeshManipulation>().updateBorders = true;
-        //     leftTaillight.GetComponent<AlignPoints>().align = true;
-        //     
-        //     frontBumper.GetComponent<MeshManipulation>().updateBorders = false;
-        //     frontBumper.GetComponent<AlignPoints>().align = false;
-        //     leftHeadlight.GetComponent<MeshManipulation>().updateBorders = false;
-        //     leftORVM.GetComponent<MeshManipulation>().updateBorders = false;
-        // }
-        // else if (framesDone >= 600)
-        // {
-        //     rightTaillight.GetComponent<MeshManipulation>().updateBorders = true;
-        //     rightTaillight.GetComponent<AlignPoints>().align = true;
-        //     foreach (var bumperSidePanel in sidePanels)
-        //         bumperSidePanel.GetComponent<StoreData>().dontStore = true;
-        //
-        //     foreach (var backPanel in backPanels)
-        //         backPanel.GetComponent<StoreData>().dontStore = false;
-        // }
 
         framesDone++;
         pointIndex++;
