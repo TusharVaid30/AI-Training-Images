@@ -4858,7 +4858,6 @@ GameObject:
   - component: {fileID: 5324068403693259827}
   - component: {fileID: 5324068403693259829}
   - component: {fileID: 5324068403693259828}
-  - component: {fileID: 5324068403693259830}
   m_Layer: 0
   m_Name: front_door_handle
   m_TagString: Untagged
@@ -5712,23 +5711,19 @@ Transform:
   - {fileID: 2087859800622624213}
   - {fileID: 5468228463000842179}
   - {fileID: 8764854335794417963}
-  - {fileID: 1804023154717369440}
-  - {fileID: 7650628825235239052}
   - {fileID: 8551013235500028814}
-  - {fileID: 2419811806480130393}
-  - {fileID: 9026060448612813209}
-  - {fileID: 4200911570844347740}
-  - {fileID: 2540220705958921173}
-  - {fileID: 944806546123030724}
-  - {fileID: 315201904821474374}
-  - {fileID: 6503815760407978279}
   - {fileID: 7987590906424106497}
   - {fileID: 7981102123009115714}
-  - {fileID: 5607070077459119262}
-  - {fileID: 9189697273672254949}
-  - {fileID: 8479029045148911396}
-  - {fileID: 8498443007392230350}
   - {fileID: 4074728559443015296}
+  - {fileID: 8498443007392230350}
+  - {fileID: 8479029045148911396}
+  - {fileID: 9189697273672254949}
+  - {fileID: 5607070077459119262}
+  - {fileID: 6503815760407978279}
+  - {fileID: 2419811806480130393}
+  - {fileID: 9026060448612813209}
+  - {fileID: 944806546123030724}
+  - {fileID: 315201904821474374}
   m_Father: {fileID: 2040488960}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6203,24 +6198,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3445592838026903466}
   m_Mesh: {fileID: 8348157033224475204, guid: 9c04ea86a07dd2c42bf5fec8e6250598, type: 3}
---- !u!1 &292483416109980699
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2540220705958921173}
-  - component: {fileID: 7366458747554876675}
-  - component: {fileID: 3465143208184960325}
-  m_Layer: 0
-  m_Name: Car Body.008|Cube.035|Dupli|3
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &295834664242389859
 GameObject:
   m_ObjectHideFlags: 0
@@ -6321,13 +6298,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7855642819077411475}
-  m_LocalRotation: {x: 0.00000001545431, y: -0.000000015454312, z: -0.7071068, w: 0.7071067}
-  m_LocalPosition: {x: 0.004927608, y: 0.039284818, z: 0.008429407}
-  m_LocalScale: {x: -0.16519052, y: -0.16519052, z: -0.16519049}
+  m_LocalRotation: {x: 0.000000014901161, y: -0.000000029802322, z: -0.7071068, w: 0.7071067}
+  m_LocalPosition: {x: 0.0049276385, y: 0.039284814, z: 0.008429411}
+  m_LocalScale: {x: -0.1651905, y: -0.1651905, z: -0.16519049}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 197840838953497429}
-  m_RootOrder: 11
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &321321618188817669
 GameObject:
@@ -6612,7 +6589,7 @@ GameObject:
   - component: {fileID: 8957602186194150955}
   - component: {fileID: 9152907336270764640}
   m_Layer: 0
-  m_Name: Car Body.007|Cube.034|Dupli|16
+  m_Name: c
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7347,24 +7324,6 @@ GameObject:
   - component: {fileID: 2314101061403146104}
   m_Layer: 0
   m_Name: boot_ok_001.005|Cube.030|Dupli|46
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &502254937526831912
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4534660837793400131}
-  - component: {fileID: 6144907920071359757}
-  - component: {fileID: 4811398660452286895}
-  m_Layer: 0
-  m_Name: Car Body.007|Cube.034|Dupli|19
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8944,7 +8903,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2540968413795901293}
-  m_RootOrder: 6
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &690473066597366623
 GameObject:
@@ -10574,7 +10533,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 197840838953497429}
-  m_RootOrder: 10
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &945188633502826191
 MeshFilter:
@@ -12525,7 +12484,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2540968413795901293}
-  m_RootOrder: 13
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1244631831589185894
 MeshRenderer:
@@ -13343,7 +13302,7 @@ GameObject:
   - component: {fileID: 9009715457781239112}
   - component: {fileID: 4951034747345425114}
   m_Layer: 0
-  m_Name: Car Body.007|Cube.034|Dupli|13
+  m_Name: z
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16055,21 +16014,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1804023154717369440
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2290886680881048648}
-  m_LocalRotation: {x: 0.00000001545431, y: -0.000000015454312, z: -0.7071068, w: 0.7071067}
-  m_LocalPosition: {x: -0.0014005066, y: 0.02244667, z: -0.004092642}
-  m_LocalScale: {x: -0.16519052, y: -0.16519052, z: -0.16519049}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 197840838953497429}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1804265280393044455
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16354,7 +16298,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2540968413795901293}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1843663900580002831
 MeshFilter:
@@ -19167,24 +19111,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5280710246887661800}
   m_Mesh: {fileID: 8818698611232248201, guid: 9c04ea86a07dd2c42bf5fec8e6250598, type: 3}
---- !u!1 &2290886680881048648
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1804023154717369440}
-  - component: {fileID: 7289373107166175357}
-  - component: {fileID: 3160348658990687773}
-  m_Layer: 0
-  m_Name: Car Body.008|Cube.035|Dupli|18
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &2295426295881477396
 GameObject:
   m_ObjectHideFlags: 0
@@ -19663,24 +19589,6 @@ Transform:
   m_Father: {fileID: 1570975585614207969}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2387882164681596779
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3002519449251605994}
-  - component: {fileID: 4817266619948994578}
-  - component: {fileID: 4361011284028449026}
-  m_Layer: 0
-  m_Name: Car Body.007|Cube.034|Dupli|3
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!23 &2406305127774974513
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -19774,7 +19682,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 197840838953497429}
-  m_RootOrder: 6
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &2421120782593749037
 MeshRenderer:
@@ -20002,7 +19910,7 @@ GameObject:
   - component: {fileID: 2330057219459896239}
   - component: {fileID: 1244631831589185894}
   m_Layer: 0
-  m_Name: Car Body.008|Cube.035|Dupli|8
+  m_Name: x
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20363,7 +20271,7 @@ GameObject:
   - component: {fileID: 4389340518072037582}
   - component: {fileID: 8117976644125928174}
   m_Layer: 0
-  m_Name: Car Body.007|Cube.034|Dupli|17
+  m_Name: c
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20859,21 +20767,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2540220705958921173
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 292483416109980699}
-  m_LocalRotation: {x: 0.00000001545431, y: -0.000000015454312, z: -0.7071068, w: 0.7071067}
-  m_LocalPosition: {x: -0.0014007502, y: 0.022920456, z: 0.0070082787}
-  m_LocalScale: {x: -0.16519052, y: -0.16519052, z: -0.16519049}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 197840838953497429}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &2540281462666930299
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20934,20 +20827,18 @@ Transform:
   - {fileID: 6686127689475917886}
   - {fileID: 5830917837317981363}
   - {fileID: 8887817218333560624}
-  - {fileID: 689849232699512494}
-  - {fileID: 3990385848575084833}
-  - {fileID: 4534660837793400131}
-  - {fileID: 3002519449251605994}
-  - {fileID: 8641762203707252662}
-  - {fileID: 3110415668834093614}
-  - {fileID: 1841681982988630426}
   - {fileID: 1240490945103365418}
   - {fileID: 4984755643122199628}
-  - {fileID: 6365302821711515486}
-  - {fileID: 3897856324695638054}
-  - {fileID: 6796440331956698306}
-  - {fileID: 8117976644125928173}
   - {fileID: 9152907336270764639}
+  - {fileID: 8117976644125928173}
+  - {fileID: 6796440331956698306}
+  - {fileID: 3897856324695638054}
+  - {fileID: 6365302821711515486}
+  - {fileID: 1841681982988630426}
+  - {fileID: 689849232699512494}
+  - {fileID: 3990385848575084833}
+  - {fileID: 8641762203707252662}
+  - {fileID: 3110415668834093614}
   m_Father: {fileID: 2040488960}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -21189,7 +21080,7 @@ GameObject:
   - component: {fileID: 557338750395612849}
   - component: {fileID: 2612381404786488656}
   m_Layer: 0
-  m_Name: Car Body.007|Cube.034|Dupli|7
+  m_Name: c
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22139,7 +22030,7 @@ GameObject:
   - component: {fileID: 2073124282706302693}
   - component: {fileID: 1042206796879512371}
   m_Layer: 0
-  m_Name: Car Body.008|Cube.035|Dupli|7
+  m_Name: x
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23882,7 +23773,7 @@ GameObject:
   - component: {fileID: 839250781761332215}
   - component: {fileID: 2312603634308115127}
   m_Layer: 0
-  m_Name: Car Body.007|Cube.034|Dupli|6
+  m_Name: c
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23931,21 +23822,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3733324404535480886}
   m_RootOrder: 32
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &3002519449251605994
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2387882164681596779}
-  m_LocalRotation: {x: 0.000000014901161, y: -0.000000029802322, z: -0.7071068, w: 0.7071067}
-  m_LocalPosition: {x: -0.0014008976, y: 0.022920476, z: 0.0070082676}
-  m_LocalScale: {x: -0.16519052, y: -0.16519052, z: -0.16519049}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2540968413795901293}
-  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &3002576169234802008
 MeshRenderer:
@@ -24794,7 +24670,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2540968413795901293}
-  m_RootOrder: 11
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &3110422074828621974
 Transform:
@@ -25116,48 +24992,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!23 &3160348658990687773
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2290886680881048648}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &3160983314116506592
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -26997,48 +26831,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!23 &3465143208184960325
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 292483416109980699}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &3466340394896868505
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -28023,7 +27815,6 @@ GameObject:
   - component: {fileID: 1195450693536878604}
   - component: {fileID: 3630714924196584064}
   - component: {fileID: 3630714924196584063}
-  - component: {fileID: 3630714924196584065}
   m_Layer: 0
   m_Name: back_door_handle
   m_TagString: Untagged
@@ -28056,19 +27847,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dontStore: 1
---- !u!114 &3630714924196584065
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3630714924196584062}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8fad86ee626e8442a1d529f786e88aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  align: 1
 --- !u!33 &3632864334578481020
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -28092,14 +27870,6 @@ Transform:
   m_Father: {fileID: 5145767169113754892}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &3640954615076626601
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9090117962084483023}
-  m_Mesh: {fileID: 43473080425868587, guid: 9c04ea86a07dd2c42bf5fec8e6250598, type: 3}
 --- !u!4 &3662006192547617770
 Transform:
   m_ObjectHideFlags: 0
@@ -29192,24 +28962,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &3835539557649949550
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7650628825235239052}
-  - component: {fileID: 4596444910632109284}
-  - component: {fileID: 7514119352537597871}
-  m_Layer: 0
-  m_Name: Car Body.008|Cube.035|Dupli|13
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!33 &3839823554463476575
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -29602,7 +29354,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2540968413795901293}
-  m_RootOrder: 16
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3898215782030314668
 GameObject:
@@ -30363,7 +30115,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2540968413795901293}
-  m_RootOrder: 7
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &3996367345681621276
 Transform:
@@ -31125,7 +30877,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 197840838953497429}
-  m_RootOrder: 19
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4075401019141524845
 Transform:
@@ -32065,21 +31817,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4407168326995746015}
   m_Mesh: {fileID: 7586429956840046421, guid: 9c04ea86a07dd2c42bf5fec8e6250598, type: 3}
---- !u!4 &4200911570844347740
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9090117962084483023}
-  m_LocalRotation: {x: 0.00000001545431, y: -0.000000015454312, z: -0.7071068, w: 0.7071067}
-  m_LocalPosition: {x: -0.0010043125, y: 0.022403106, z: 0.0065497523}
-  m_LocalScale: {x: -0.16519052, y: -0.16519052, z: -0.16519049}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 197840838953497429}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4202221859127767826
 GameObject:
   m_ObjectHideFlags: 0
@@ -32400,7 +32137,7 @@ GameObject:
   - component: {fileID: 1139926794129153073}
   - component: {fileID: 9156080621634751384}
   m_Layer: 0
-  m_Name: Car Body.007|Cube.034|Dupli|
+  m_Name: z
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32924,48 +32661,6 @@ Transform:
   m_Father: {fileID: 8793196732586599780}
   m_RootOrder: 49
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &4361011284028449026
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2387882164681596779}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &4362879898206024786
 GameObject:
   m_ObjectHideFlags: 0
@@ -33848,21 +33543,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!4 &4534660837793400131
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 502254937526831912}
-  m_LocalRotation: {x: 0.000000014901161, y: -0.000000029802322, z: -0.7071068, w: 0.7071067}
-  m_LocalPosition: {x: -0.0010040235, y: 0.022403078, z: 0.006549732}
-  m_LocalScale: {x: -0.16519052, y: -0.16519052, z: -0.16519049}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2540968413795901293}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4535566723934765427
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -34209,14 +33889,6 @@ Transform:
   m_Father: {fileID: 5145767169113754892}
   m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &4596444910632109284
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3835539557649949550}
-  m_Mesh: {fileID: 43473080425868587, guid: 9c04ea86a07dd2c42bf5fec8e6250598, type: 3}
 --- !u!4 &4603510104026905101
 Transform:
   m_ObjectHideFlags: 0
@@ -35547,48 +35219,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!23 &4811398660452286895
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 502254937526831912}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &4812060307467233776
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -35628,14 +35258,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6380386358164611182}
   m_Mesh: {fileID: -396250493908375475, guid: 9c04ea86a07dd2c42bf5fec8e6250598, type: 3}
---- !u!33 &4817266619948994578
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2387882164681596779}
-  m_Mesh: {fileID: -3202756231502254146, guid: 9c04ea86a07dd2c42bf5fec8e6250598, type: 3}
 --- !u!33 &4817893644419083691
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -37059,7 +36681,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2540968413795901293}
-  m_RootOrder: 14
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4988496104431656277
 MeshFilter:
@@ -38072,7 +37694,7 @@ GameObject:
   - component: {fileID: 6634247667039389157}
   - component: {fileID: 4638275745099778465}
   m_Layer: 0
-  m_Name: Car Body.007|Cube.034|Dupli|1
+  m_Name: z
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -39127,19 +38749,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dontStore: 1
---- !u!114 &5324068403693259830
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 74313466142141146}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8fad86ee626e8442a1d529f786e88aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  align: 1
 --- !u!33 &5324279910026222162
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -40462,7 +40071,7 @@ GameObject:
   - component: {fileID: 2036401176967061398}
   - component: {fileID: 5259373284444262836}
   m_Layer: 0
-  m_Name: Car Body.007|Cube.034|Dupli|8
+  m_Name: c
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -40777,7 +40386,7 @@ GameObject:
   - component: {fileID: 8421674673554863021}
   - component: {fileID: 8168698390932873224}
   m_Layer: 0
-  m_Name: Car Body.008|Cube.035|Dupli|6
+  m_Name: x
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -40930,7 +40539,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 197840838953497429}
-  m_RootOrder: 15
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &5616431227766456469
 Transform:
@@ -41474,7 +41083,7 @@ GameObject:
   - component: {fileID: 3275808051617090464}
   - component: {fileID: 1793036467615583225}
   m_Layer: 0
-  m_Name: Car Body.007|Cube.034|Dupli|2
+  m_Name: z
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -41632,7 +41241,7 @@ GameObject:
   - component: {fileID: 4408499470728447107}
   - component: {fileID: 7134226530932498690}
   m_Layer: 0
-  m_Name: Car Body.007|Cube.034|Dupli|18
+  m_Name: z
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43650,14 +43259,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &6144907920071359757
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 502254937526831912}
-  m_Mesh: {fileID: -3202756231502254146, guid: 9c04ea86a07dd2c42bf5fec8e6250598, type: 3}
 --- !u!1 &6149101096198983343
 GameObject:
   m_ObjectHideFlags: 0
@@ -44972,7 +44573,7 @@ GameObject:
   - component: {fileID: 5356178143195160686}
   - component: {fileID: 1759009885844370521}
   m_Layer: 0
-  m_Name: Car Body.008|Cube.035|Dupli|17
+  m_Name: x
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45221,7 +44822,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2540968413795901293}
-  m_RootOrder: 15
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &6369446157710261752
 MeshRenderer:
@@ -46183,7 +45784,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 197840838953497429}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6507929930392441000
 MeshFilter:
@@ -47800,7 +47401,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2540968413795901293}
-  m_RootOrder: 17
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6797213302366837218
 GameObject:
@@ -47915,7 +47516,7 @@ GameObject:
   - component: {fileID: 2085364858913797417}
   - component: {fileID: 6982427608238915622}
   m_Layer: 0
-  m_Name: Car Body.007|Cube.034|Dupli|14
+  m_Name: c
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47954,48 +47555,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!23 &6812760893628468140
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9090117962084483023}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!4 &6814919988657806983
 Transform:
   m_ObjectHideFlags: 0
@@ -51054,14 +50613,6 @@ Transform:
   m_Father: {fileID: 543450652853254790}
   m_RootOrder: 54
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &7289373107166175357
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2290886680881048648}
-  m_Mesh: {fileID: 43473080425868587, guid: 9c04ea86a07dd2c42bf5fec8e6250598, type: 3}
 --- !u!23 &7290856535316186758
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -51723,14 +51274,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   align: 1
---- !u!33 &7366458747554876675
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 292483416109980699}
-  m_Mesh: {fileID: 43473080425868587, guid: 9c04ea86a07dd2c42bf5fec8e6250598, type: 3}
 --- !u!4 &7368054411989002142
 Transform:
   m_ObjectHideFlags: 0
@@ -52439,48 +51982,6 @@ Transform:
   m_Father: {fileID: 8793196732586599780}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &7514119352537597871
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3835539557649949550}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!23 &7514161287016684968
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -53188,7 +52689,7 @@ GameObject:
   - component: {fileID: 2611968213007224451}
   - component: {fileID: 3174675372364491156}
   m_Layer: 0
-  m_Name: Car Body.007|Cube.034|Dupli|15
+  m_Name: c
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -53366,21 +52867,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1570975585614207969}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &7650628825235239052
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3835539557649949550}
-  m_LocalRotation: {x: 0.00000001545431, y: -0.000000015454312, z: -0.7071068, w: 0.7071067}
-  m_LocalPosition: {x: -0.0021923517, y: 0.021842156, z: -0.0045303404}
-  m_LocalScale: {x: -0.16519052, y: -0.16519052, z: -0.16519049}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 197840838953497429}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &7655979834339439537
@@ -55738,7 +55224,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 197840838953497429}
-  m_RootOrder: 14
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &7987590906424106497
 Transform:
@@ -55753,7 +55239,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 197840838953497429}
-  m_RootOrder: 13
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7988236848802535826
 MeshFilter:
@@ -56664,7 +56150,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2540968413795901293}
-  m_RootOrder: 18
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8117976644125928174
 MonoBehaviour:
@@ -59197,7 +58683,7 @@ GameObject:
   - component: {fileID: 5633033479116587727}
   - component: {fileID: 4586974952634658036}
   m_Layer: 0
-  m_Name: Car Body.007|Cube.034|Dupli|12
+  m_Name: z
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -59345,7 +58831,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 197840838953497429}
-  m_RootOrder: 17
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8479746563091804057
 GameObject:
@@ -59545,7 +59031,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 197840838953497429}
-  m_RootOrder: 18
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &8499093225443253379
 MeshRenderer:
@@ -59708,7 +59194,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 197840838953497429}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &8554871074509717447
 Transform:
@@ -60211,7 +59697,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2540968413795901293}
-  m_RootOrder: 10
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &8661223813674073692
 Transform:
@@ -63536,7 +63022,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 197840838953497429}
-  m_RootOrder: 7
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &9028408814588803998
 MeshRenderer:
@@ -64092,24 +63578,6 @@ Transform:
   m_Father: {fileID: 5447486425367437990}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &9090117962084483023
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4200911570844347740}
-  - component: {fileID: 3640954615076626601}
-  - component: {fileID: 6812760893628468140}
-  m_Layer: 0
-  m_Name: Car Body.008|Cube.035|Dupli|19
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!23 &9090392198189050903
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -64675,7 +64143,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2540968413795901293}
-  m_RootOrder: 19
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &9152907336270764640
 MonoBehaviour:
@@ -64911,7 +64379,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 197840838953497429}
-  m_RootOrder: 16
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &9189808083122816923
 MeshRenderer:
