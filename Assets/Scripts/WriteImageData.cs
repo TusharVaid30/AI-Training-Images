@@ -98,8 +98,8 @@ public class WriteImageData : MonoBehaviour
                     WriteStringLine("           [");
                     for (var j = 0; j < panels[x].GetComponent<FramesAndCoords>().data[i].Length; j++)
                     {
-                        WriteString("                       " + panels[x].GetComponent<FramesAndCoords>().data[i][j].x + ", " + 
-                                    panels[x].GetComponent<FramesAndCoords>().data[i][j].y);
+                        WriteString("                       " + Mathf.Clamp(panels[x].GetComponent<FramesAndCoords>().data[i][j].x, 0f, 1920f) + ", " + 
+                                    Mathf.Clamp(panels[x].GetComponent<FramesAndCoords>().data[i][j].y, 0f, 1080f));
 
                         WriteStringLine(j == panels[x].GetComponent<FramesAndCoords>().data[i].Length - 1 ? "" : ",");
                     }
