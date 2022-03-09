@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using UnityEngine;
@@ -60,7 +61,7 @@ public class WriteImageData : MonoBehaviour
             WriteStringLine("         \"height\":  1080,");
             WriteStringLine("         \"width\":  1920,");
             WriteStringLine("         \"id\": " + i + ",");
-            WriteStringLine("         \"name\": \" " + carName + "_" + i + 1 + ".png\"");
+            WriteStringLine("         \"file_name\": \"" + carName + "_" + (i + 1) + ".png\"");
             WriteStringLine(i == data.numberOfFrames - 1 ? "     }" : "      },");
         }
         WriteStringLine("     ],");
@@ -76,22 +77,43 @@ public class WriteImageData : MonoBehaviour
                     WriteStringLine("           \"iscrowd\": 0,");
                     WriteStringLine("           \"image_id\":" + i +",");
             
+                    WriteStringLine("           \"bbox\": [");
+
+                    var bboxX = new List<float>();
+                    var bboxY = new List<float>();
+
+                    for (var z = 0; z < panels[x].GetComponent<FramesAndCoords>().data[i].Length; z++)
+                    {
+                        bboxX.Add(panels[x].GetComponent<FramesAndCoords>().data[i][z].x);
+                        bboxY.Add(panels[x].GetComponent<FramesAndCoords>().data[i][z].y);
+                    }
+                    
+                    WriteStringLine("           " + Mathf.Min(bboxX.ToArray()) + ",");
+                    WriteStringLine("           " + Mathf.Min(bboxY.ToArray()) + ",");
+                    WriteStringLine("           " + (Mathf.Max(bboxX.ToArray()) - Mathf.Min(bboxX.ToArray())) + ",");
+                    WriteStringLine("           " + (Mathf.Max(bboxY.ToArray()) - Mathf.Min(bboxY.ToArray())));
+                    WriteStringLine("           ],");
+                    
                     WriteStringLine("          \"segmentation\" : [");
                     WriteStringLine("           [");
                     for (var j = 0; j < panels[x].GetComponent<FramesAndCoords>().data[i].Length; j++)
                     {
-                        WriteString("                       " + panels[x].GetComponent<FramesAndCoords>().data[i][j].x + ", " + 
+                        WriteString("                       [" + panels[x].GetComponent<FramesAndCoords>().data[i][j].x + ", " + 
                                     panels[x].GetComponent<FramesAndCoords>().data[i][j].y);
 
-                        WriteStringLine(x == panels[x].GetComponent<FramesAndCoords>().data[i].Length - 1 ? "" : ",");
+                        WriteStringLine(j == panels[x].GetComponent<FramesAndCoords>().data[i].Length - 1 ? "]" : "],");
                     }
                     WriteStringLine("            ]");
                     WriteStringLine("        ],");
                     WriteStringLine("           \"category_id\":" + x + ",");
                     WriteStringLine("           \"id\":" + annID + ",");
-                    WriteStringLine("           \"area\": 2073600");
-                    WriteStringLine(x == panels.Length - 1 ? "        }" : "     },");
-                    
+                    WriteStringLine("           \"area\":" + (Mathf.Max(bboxX.ToArray()) - Mathf.Min(bboxX.ToArray())) *
+                        (Mathf.Max(bboxY.ToArray()) - Mathf.Min(bboxY.ToArray())));
+                    if (x == panels.Length - 1 && i == data.numberOfFrames - 1)
+                        WriteStringLine("     }");
+                    else
+                        WriteStringLine("     },");
+
                     annID++;
                 }
             }
