@@ -48,17 +48,17 @@ public class WriteImageData : MonoBehaviour
 
 
             WriteStringLine("{");
-            WriteStringLine("     \"categories\":" + " [");
-            for (var a = 0; a < panels.Length; a++)
-            {
-                WriteStringLine("       {");
-                WriteStringLine("         \"supercategory\": \"" + panels[a].name + "\",");
-                WriteStringLine("         \"id\":" + a + ",");
-                WriteStringLine("         \"name\": \"" + panels[a].name + "\"");
-                WriteStringLine(a == panels.Length - 1 ? "     }" : "      },");
-            }
-
-            WriteStringLine("      ],");
+            // WriteStringLine("     \"categories\":" + " [");
+            // for (var a = 0; a < panels.Length; a++)
+            // {
+            //     WriteStringLine("       {");
+            //     WriteStringLine("         \"supercategory\": \"" + panels[a].name + "\",");
+            //     WriteStringLine("         \"id\":" + a + ",");
+            //     WriteStringLine("         \"name\": \"" + panels[a].name + "\"");
+            //     WriteStringLine(a == panels.Length - 1 ? "     }" : "      },");
+            // }
+            //
+            // WriteStringLine("      ],");
             WriteStringLine("     \"images\":" + " [");
             WriteStringLine("       {");
             WriteStringLine("         \"height\":  1080,");
@@ -124,6 +124,16 @@ public class WriteImageData : MonoBehaviour
                     annID++;
                 }
             }
+
+            if (i == data.numberOfFrames - 2)
+            {
+                writer.Close();
+                var fileStream = new FileStream(path, FileMode.Open, FileAccess.ReadWrite);
+                if (fileStream.ReadByte() == ',')
+                    fileStream.SetLength(fileStream.Length - 1);
+                //OpenFile();
+            }
+
             WriteStringLine("]}");
         }
 
