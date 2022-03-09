@@ -13,5 +13,4 @@ MonoBehaviour:
   m_Name: Data
   m_EditorClassIdentifier: 
   numberOfFrames: 750
-  path: C:\Users\tusha\Documents\Blender\Projects\Panel Segmentation\More Cars\MUV
-    2_\test.json
+  path: D:\Pausch\Tushar\Jsons\MUV2.json
