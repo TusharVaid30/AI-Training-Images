@@ -40,7 +40,7 @@ public class WriteImageData : MonoBehaviour
     }
 
     private void SetupData()
-    {        
+    {
         for (var i = 0; i <= data.numberOfFrames - 1; i++)
         {
             path = data.path + "_" + (i + 1) + ".png.json";
@@ -125,14 +125,11 @@ public class WriteImageData : MonoBehaviour
                 }
             }
 
-            if (i == data.numberOfFrames - 2)
-            {
-                writer.Close();
-                var fileStream = new FileStream(path, FileMode.Open, FileAccess.ReadWrite);
-                if (fileStream.ReadByte() == ',')
-                    fileStream.SetLength(fileStream.Length - 1);
-                //OpenFile();
-            }
+            writer.Close();
+            var fileStream = new FileStream(path, FileMode.Open, FileAccess.ReadWrite);
+            fileStream.SetLength(fileStream.Length - 3);
+            fileStream.Close();
+            OpenFile();
 
             WriteStringLine("]}");
         }
