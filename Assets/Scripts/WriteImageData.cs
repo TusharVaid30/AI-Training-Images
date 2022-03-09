@@ -101,12 +101,12 @@ public class WriteImageData : MonoBehaviour
                     WriteStringLine("           [");
                     for (var j = 0; j < panels[x].GetComponent<FramesAndCoords>().data[i].Length; j++)
                     {
-                        WriteString("                       " +
+                        WriteString("                       [" +
                                     panels[x].GetComponent<FramesAndCoords>().data[i][j].x + ", " +
                                     panels[x].GetComponent<FramesAndCoords>().data[i][j].y);
 
                         WriteStringLine(
-                            j == panels[x].GetComponent<FramesAndCoords>().data[i].Length - 1 ? "" : ",");
+                            j == panels[x].GetComponent<FramesAndCoords>().data[i].Length - 1 ? "]" : "],");
                     }
 
                     WriteStringLine("            ]");
@@ -116,7 +116,7 @@ public class WriteImageData : MonoBehaviour
                     WriteStringLine("           \"area\":" +
                                     (Mathf.Max(bboxX.ToArray()) - Mathf.Min(bboxX.ToArray())) *
                                     (Mathf.Max(bboxY.ToArray()) - Mathf.Min(bboxY.ToArray())));
-                    if (x == panels.Length - 1 && i == data.numberOfFrames - 1)
+                    if (x == panels.Length - 1)
                         WriteStringLine("     }");
                     else
                         WriteStringLine("     },");

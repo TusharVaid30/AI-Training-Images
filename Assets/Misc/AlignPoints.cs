@@ -57,7 +57,7 @@ namespace Misc_
                 }
             }
             if (transform.name != "Front Bumper") return;
-            for (var i = transform.childCount - 1; i > transform.childCount - 5; i--)
+            for (var i = transform.childCount - 1; i > transform.childCount - 10; i--)
             {
                 try
                 {
