@@ -112,7 +112,7 @@ public class WriteImageData : MonoBehaviour
 
                     WriteStringLine("            ]");
                     WriteStringLine("        ],");
-                    WriteStringLine("           \"category_name\":" + panels[x].name + ",");
+                    WriteStringLine("           \"category_name\":" + "\"" + panels[x].name + "\" ,");
                     WriteStringLine("           \"id\":" + annID + ",");
                     WriteStringLine("           \"area\":" +
                                     (Mathf.Max(bboxX.ToArray()) - Mathf.Min(bboxX.ToArray())) *
