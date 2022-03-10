@@ -119,7 +119,7 @@ public class WriteImageData : MonoBehaviour
                     if (x == panels.Length - 1)
                         WriteStringLine("     }");
                     else
-                        WriteStringLine("     },");
+                        WriteString("     },");
 
                     annID++;
                 }
@@ -127,7 +127,7 @@ public class WriteImageData : MonoBehaviour
 
             writer.Close();
             var fileStream = new FileStream(path, FileMode.Open, FileAccess.ReadWrite);
-            fileStream.SetLength(fileStream.Length - 3);
+            fileStream.SetLength(fileStream.Length - 1);
             fileStream.Close();
             OpenFile();
 
