@@ -157,9 +157,4 @@ public class WriteImageData : MonoBehaviour
     {
         writer.Write(text);
     }
-
-    private void OnDestroy()
-    {
-        writer.Close();
-    }
 }
