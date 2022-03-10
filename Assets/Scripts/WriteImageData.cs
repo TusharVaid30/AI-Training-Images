@@ -48,17 +48,17 @@ public class WriteImageData : MonoBehaviour
 
 
             WriteStringLine("{");
-            WriteStringLine("     \"categories\":" + " [");
-            for (var a = 0; a < panels.Length; a++)
-            {
-                WriteStringLine("       {");
-                WriteStringLine("         \"supercategory\": \"" + panels[a].name + "\",");
-                WriteStringLine("         \"id\":" + a + ",");
-                WriteStringLine("         \"name\": \"" + panels[a].name + "\"");
-                WriteStringLine(a == panels.Length - 1 ? "     }" : "      },");
-            }
-
-            WriteStringLine("      ],");
+            // WriteStringLine("     \"categories\":" + " [");
+            // for (var a = 0; a < panels.Length; a++)
+            // {
+            //     WriteStringLine("       {");
+            //     WriteStringLine("         \"supercategory\": \"" + panels[a].name + "\",");
+            //     WriteStringLine("         \"id\":" + a + ",");
+            //     WriteStringLine("         \"name\": \"" + panels[a].name + "\"");
+            //     WriteStringLine(a == panels.Length - 1 ? "     }" : "      },");
+            // }
+            //
+            // WriteStringLine("      ],");
             WriteStringLine("     \"images\":" + " [");
             WriteStringLine("       {");
             WriteStringLine("         \"height\":  1080,");
@@ -97,7 +97,6 @@ public class WriteImageData : MonoBehaviour
                                     ",");
                     WriteStringLine("           " + (Mathf.Max(bboxY.ToArray()) - Mathf.Min(bboxY.ToArray())));
                     WriteStringLine("           ],");
-
                     WriteStringLine("          \"segmentation\" : [");
                     WriteStringLine("           [");
                     for (var j = 0; j < panels[x].GetComponent<FramesAndCoords>().data[i].Length; j++)
@@ -117,7 +116,7 @@ public class WriteImageData : MonoBehaviour
                     WriteStringLine("           \"area\":" +
                                     (Mathf.Max(bboxX.ToArray()) - Mathf.Min(bboxX.ToArray())) *
                                     (Mathf.Max(bboxY.ToArray()) - Mathf.Min(bboxY.ToArray())));
-                    if (x == panels.Length - 1 && i == data.numberOfFrames - 1)
+                    if (x == panels.Length - 1)
                         WriteStringLine("     }");
                     else
                         WriteStringLine("     },");
@@ -125,10 +124,15 @@ public class WriteImageData : MonoBehaviour
                     annID++;
                 }
             }
+
+            writer.Close();
+            var fileStream = new FileStream(path, FileMode.Open, FileAccess.ReadWrite);
+            fileStream.SetLength(fileStream.Length - 3);
+            fileStream.Close();
+            OpenFile();
+
+            WriteStringLine("]}");
         }
-
-
-        WriteStringLine("]}");
 
         DebugInfo("Data Written");
 
@@ -141,6 +145,7 @@ public class WriteImageData : MonoBehaviour
     private void OpenFile()
     {
         writer = new StreamWriter(path, true);
+        writer.AutoFlush = true;
     }
 
     private void WriteStringLine(string text)
@@ -151,10 +156,5 @@ public class WriteImageData : MonoBehaviour
     private void WriteString(string text)
     {
         writer.Write(text);
-    }
-
-    private void OnDestroy()
-    {
-        writer.Close();
     }
 }
