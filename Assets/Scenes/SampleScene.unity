@@ -3392,26 +3392,10 @@ MonoBehaviour:
   pixelPosition: {fileID: 1047038094}
   debugText: {fileID: 1033684475}
   panels:
-  - {fileID: 1578115776285183143}
-  - {fileID: 1175566421777884700}
-  - {fileID: 8304385044092416859}
-  - {fileID: 1094403514835821239}
-  - {fileID: 8204592526630114678}
-  - {fileID: 7518757663853119495}
-  - {fileID: 8037224968275738974}
-  - {fileID: 8140803357366156719}
-  - {fileID: 1422388693}
-  - {fileID: 1997839997776126288}
-  - {fileID: 2730672613082606465}
-  - {fileID: 9080005540982291284}
-  - {fileID: 6329715466971640699}
-  - {fileID: 2289375110550840652}
-  - {fileID: 1657969012}
-  - {fileID: 404996189916841632}
-  - {fileID: 2335075150794260634}
   - {fileID: 593601359}
-  - {fileID: 1481736389}
+  - {fileID: 2335075150794260634}
   - {fileID: 921794094874124197}
+  - {fileID: 1481736389}
   - {fileID: 114732495642522928}
   - {fileID: 4168302342080282870}
   - {fileID: 6756468277899514841}
@@ -3421,6 +3405,18 @@ MonoBehaviour:
   - {fileID: 409822476}
   - {fileID: 854079618}
   - {fileID: 2004295577295006367}
+  - {fileID: 1578115776285183143}
+  - {fileID: 1175566421777884700}
+  - {fileID: 1094403514835821239}
+  - {fileID: 7518757663853119495}
+  - {fileID: 8037224968275738974}
+  - {fileID: 8140803357366156719}
+  - {fileID: 1422388693}
+  - {fileID: 1997839997776126288}
+  - {fileID: 9080005540982291284}
+  - {fileID: 6329715466971640699}
+  - {fileID: 2289375110550840652}
+  - {fileID: 404996189916841632}
   - {fileID: 1048845705}
 --- !u!114 &1047038094
 MonoBehaviour:
@@ -5235,11 +5231,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1645055122}
   m_Mesh: {fileID: 6800124590300119503, guid: 300e50640c3c27448a3d2ef39a31abfb, type: 3}
---- !u!4 &1657969012 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 90aea94c370854a478a37661d8817392, type: 3}
-  m_PrefabInstance: {fileID: 811670902}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1669414975
 GameObject:
   m_ObjectHideFlags: 0
