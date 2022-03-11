@@ -1,23 +1,29 @@
+using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class WriteImageData : MonoBehaviour
 {
+    [SerializeField] private string carName;
+    
+    
     [SerializeField] private Data data;
     [SerializeField] private GetPixelPosition pixelPosition;
     [SerializeField] private Text debugText;
-    [SerializeField] private CoordsPerFrame[] coordsPerFrame;
 
-    [SerializeField] private Transform[] points;
-    
+    [SerializeField] private Transform[] panels;
     
     private string path;
     private bool stopWriting;
+    private StreamWriter writer;
+
+    private int annID;
 
     private void Start()
     {
-        path = data.path;
     }
 
     private void Update()
@@ -35,26 +41,98 @@ public class WriteImageData : MonoBehaviour
 
     private void SetupData()
     {
-        WriteStringLine("{");
-        WriteStringLine("     \"data\":" + " [");
         for (var i = 0; i <= data.numberOfFrames - 1; i++)
         {
-            WriteStringLine("     [");
-            WriteStringLine("     {\"img_name\"   :    " + "\""+ (i + 1) + ".png\", \"damage_type\"  :   \"crack\", \"points\":   ");
+            path = data.path + "_" + (i + 1) + ".png.json";
+            OpenFile();
 
-            WriteStringLine("          [");
-            for (var j = 0; j < coordsPerFrame.Length; j++)
+
+            WriteStringLine("{");
+            // WriteStringLine("     \"categories\":" + " [");
+            // for (var a = 0; a < panels.Length; a++)
+            // {
+            //     WriteStringLine("       {");
+            //     WriteStringLine("         \"supercategory\": \"" + panels[a].name + "\",");
+            //     WriteStringLine("         \"id\":" + a + ",");
+            //     WriteStringLine("         \"name\": \"" + panels[a].name + "\"");
+            //     WriteStringLine(a == panels.Length - 1 ? "     }" : "      },");
+            // }
+            //
+            // WriteStringLine("      ],");
+            WriteStringLine("     \"images\":" + " [");
+            WriteStringLine("       {");
+            WriteStringLine("         \"height\":  1080,");
+            WriteStringLine("         \"width\":  1920,");
+            WriteStringLine("         \"id\": " + i + ",");
+            WriteStringLine("         \"file_name\": \"" + carName + "_" + (i + 1) + ".png\"");
+            WriteStringLine("     }");
+
+
+            WriteStringLine("     ],");
+            WriteStringLine("     \"annotations\":" + " [");
+
+
+            for (var x = 0; x < panels.Length; x++)
             {
-                WriteString("             [" + coordsPerFrame[j].coordsX[i] + ", " + coordsPerFrame[j].coordsY[i]);
-                WriteStringLine(j == coordsPerFrame.Length - 1 ? "]" : "],");
+                if (panels[x].GetComponent<FramesAndCoords>().data.ContainsKey(i))
+                {
+                    WriteStringLine("        {");
+                    WriteStringLine("           \"iscrowd\": 0,");
+                    WriteStringLine("           \"image_id\":" + i + ",");
+
+                    WriteStringLine("           \"bbox\": [");
+
+                    var bboxX = new List<float>();
+                    var bboxY = new List<float>();
+
+                    for (var z = 0; z < panels[x].GetComponent<FramesAndCoords>().data[i].Length; z++)
+                    {
+                        bboxX.Add(panels[x].GetComponent<FramesAndCoords>().data[i][z].x);
+                        bboxY.Add(panels[x].GetComponent<FramesAndCoords>().data[i][z].y);
+                    }
+
+                    WriteStringLine("           " + Mathf.Min(bboxX.ToArray()) + ",");
+                    WriteStringLine("           " + Mathf.Min(bboxY.ToArray()) + ",");
+                    WriteStringLine("           " + (Mathf.Max(bboxX.ToArray()) - Mathf.Min(bboxX.ToArray())) +
+                                    ",");
+                    WriteStringLine("           " + (Mathf.Max(bboxY.ToArray()) - Mathf.Min(bboxY.ToArray())));
+                    WriteStringLine("           ],");
+                    WriteStringLine("          \"segmentation\" : [");
+                    WriteStringLine("           [");
+                    for (var j = 0; j < panels[x].GetComponent<FramesAndCoords>().data[i].Length; j++)
+                    {
+                        WriteString("                       " +
+                                    panels[x].GetComponent<FramesAndCoords>().data[i][j].x + ", " +
+                                    panels[x].GetComponent<FramesAndCoords>().data[i][j].y);
+
+                        WriteStringLine(
+                            j == panels[x].GetComponent<FramesAndCoords>().data[i].Length - 1 ? "" : ",");
+                    }
+
+                    WriteStringLine("            ]");
+                    WriteStringLine("        ],");
+                    WriteStringLine("           \"category_name\":" + "\"" + panels[x].name + "\" ,");
+                    WriteStringLine("           \"id\":" + annID + ",");
+                    WriteStringLine("           \"area\":" +
+                                    (Mathf.Max(bboxX.ToArray()) - Mathf.Min(bboxX.ToArray())) *
+                                    (Mathf.Max(bboxY.ToArray()) - Mathf.Min(bboxY.ToArray())));
+                    if (x == panels.Length - 1)
+                        WriteStringLine("     }");
+                    else
+                        WriteString("     },");
+
+                    annID++;
+                }
             }
-            WriteStringLine("          ]");
 
-            WriteStringLine("      }");
-            WriteStringLine(i == data.numberOfFrames - 1 ? "     ]" : "     ],");
+            writer.Close();
+            var fileStream = new FileStream(path, FileMode.Open, FileAccess.ReadWrite);
+            fileStream.SetLength(fileStream.Length - 1);
+            fileStream.Close();
+            OpenFile();
+
+            WriteStringLine("]}");
         }
-
-        WriteStringLine("]}");
 
         DebugInfo("Data Written");
 
@@ -64,17 +142,19 @@ public class WriteImageData : MonoBehaviour
 #endif
     }
 
+    private void OpenFile()
+    {
+        writer = new StreamWriter(path, true);
+        writer.AutoFlush = true;
+    }
+
     private void WriteStringLine(string text)
     {
-        var writer = new StreamWriter(path, true);
         writer.WriteLine(text);
-        writer.Close();
     }
 
     private void WriteString(string text)
     {
-        var writer = new StreamWriter(path, true);
         writer.Write(text);
-        writer.Close();
     }
 }
