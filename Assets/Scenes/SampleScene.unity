@@ -3691,6 +3691,7 @@ MonoBehaviour:
   frontPanels:
   - {fileID: 1175566421777884700}
   - {fileID: 2289375110550840652}
+  - {fileID: 404996189916841632}
   backPanels:
   - {fileID: 9080005540982291284}
 --- !u!1 &1048845704
