@@ -48,8 +48,6 @@ public class GetPixelPosition : MonoBehaviour
             //car.Play("change", -1, 0f);
             cameraPosition.Play(stateNameHash, -1, 0f);
             SetCamPosition();
-
-            InvokeRepeating(nameof(Run), TIME_TAKEN_PER_FRAME, TIME_TAKEN_PER_FRAME);
         }
     }
 
