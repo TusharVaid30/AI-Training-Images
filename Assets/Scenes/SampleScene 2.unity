@@ -2407,8 +2407,8 @@ MonoBehaviour:
   - {fileID: 2912449973890298746}
   - {fileID: 2345962751718614099}
   - {fileID: 8665603140253307322}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1412881887777183401}
+  - {fileID: 3675340625480806002}
   - {fileID: 1570975585614207969}
   - {fileID: 1468018657}
   - {fileID: 710829452}
@@ -2433,8 +2433,8 @@ MonoBehaviour:
   debugText: {fileID: 1033684475}
   frontBumper: {fileID: 197475497}
   rearBumper: {fileID: 8381306487034918338}
-  rightORVM: {fileID: 0}
-  leftORVM: {fileID: 0}
+  rightORVM: {fileID: 1412881887777183401}
+  leftORVM: {fileID: 3675340625480806002}
   trunk: {fileID: 0}
   leftTaillight: {fileID: 2345962751718614099}
   rightTaillight: {fileID: 2912449973890298746}
@@ -7384,9 +7384,9 @@ Transform:
   - {fileID: 8054872844738830200}
   - {fileID: 6293711840121520964}
   - {fileID: 6447582729320789994}
-  - {fileID: 197475497}
   - {fileID: 2776537176627808429}
   - {fileID: 3444860876087254261}
+  - {fileID: 197475497}
   - {fileID: 3569848019669268982}
   - {fileID: 2428247857053121672}
   - {fileID: 1034429210307220969}
@@ -20345,7 +20345,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 543450652853254790}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2780443262315781358
 Transform:
@@ -23685,7 +23685,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 543450652853254790}
-  m_RootOrder: 19
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3445592838026903466
 GameObject:
