@@ -97,8 +97,8 @@ public class GetPixelPosition : MonoBehaviour
         }
         else if (framesDone is >= 450 and < 600)
         {
-            // trunk.GetComponent<MeshManipulation>().updateBorders = true;
-            // trunk.GetComponent<AlignPoints>().align = true;
+            trunk.GetComponent<MeshManipulation>().updateBorders = true;
+            trunk.GetComponent<AlignPoints>().align = true;
             leftTaillight.GetComponent<MeshManipulation>().updateBorders = true;
             leftTaillight.GetComponent<AlignPoints>().align = true;
             
