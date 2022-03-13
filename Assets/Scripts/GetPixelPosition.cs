@@ -49,7 +49,7 @@ public class GetPixelPosition : MonoBehaviour
             cameraPosition.Play(stateNameHash, -1, 0f);
             SetCamPosition();
 
-            InvokeRepeating(nameof(Run), TIME_TAKEN_PER_FRAME, TIME_TAKEN_PER_FRAME);
+            //InvokeRepeating(nameof(Run), TIME_TAKEN_PER_FRAME, TIME_TAKEN_PER_FRAME);
         }
     }
 
@@ -66,7 +66,7 @@ public class GetPixelPosition : MonoBehaviour
         debugText.text = info;
     }
     
-    private void Run()
+    public void Run()
     {
         if (framesDone > numberOfFrames)
         {
