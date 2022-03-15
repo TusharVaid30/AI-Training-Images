@@ -73,9 +73,6 @@ public class MeshManipulation : UpdateMesh
         if (Camera.main == null || !updateBorders) return;
 
         FocusOnBounds(GetComponent<MeshRenderer>().bounds);
-        
-        if (transform.name == "left_fog_lamp")
-            print(bottomLeft.x);
 
         for (var x = (int) bottomLeft.x; x < topRight.x; x += factorX)
         {
@@ -86,7 +83,7 @@ public class MeshManipulation : UpdateMesh
                 RaycastHit hit;
                 if (Physics.Raycast(ray, out hit, Mathf.Infinity, ~ignore))
                 {
-                    if ((!hit.transform.CompareTag("Front Bumper") && transform.name == "Front Bumper") || hit.transform == transform)
+                    if (hit.transform == transform)
                     {
                         if (!hitPoints1.Contains(y))
                         {
@@ -202,6 +199,21 @@ public class MeshManipulation : UpdateMesh
             }
         }
         alignPoint.Align();
+        
+        if (transform.name != "front_bumper") return;
+        for (var i = transform.childCount - 1; i > transform.childCount - 10; i--)
+        {
+            try
+            {
+                Destroy(transform.GetChild(i).gameObject);
+            }
+            catch (UnityException e)
+            {
+                print(e + " in object " + transform.name);
+                throw;
+            }
+        }
+        
         hitPoints1.Clear();
         hitPoints2.Clear();
         hitPoints3.Clear();
@@ -212,8 +224,9 @@ public class MeshManipulation : UpdateMesh
     {
         Instantiate(sphere, position, Quaternion.identity, transform);
     }
+    
     private void Spawn2(Vector3 position)
     {
-        Instantiate(sphere, Camera.main.ScreenToWorldPoint(position), Quaternion.identity);
+        if (Camera.main != null) Instantiate(sphere, Camera.main.ScreenToWorldPoint(position), Quaternion.identity);
     }
 }

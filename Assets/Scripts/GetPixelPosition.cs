@@ -88,9 +88,9 @@ public class GetPixelPosition : MonoBehaviour
         }
         else if (framesDone is >= 300 and < 450)
         {
-            hood.GetComponent<MeshManipulation>().updateBorders = false;
-            rearBumper.GetComponent<MeshManipulation>().updateBorders = true;
-            rearBumper.GetComponent<AlignPoints>().align = true;
+            //hood.GetComponent<MeshManipulation>().updateBorders = false;
+            //rearBumper.GetComponent<MeshManipulation>().updateBorders = true;
+            //rearBumper.GetComponent<AlignPoints>().align = true;
             rightORVM.GetComponent<MeshManipulation>().updateBorders = false;
         }
         else if (framesDone is >= 450 and < 600)

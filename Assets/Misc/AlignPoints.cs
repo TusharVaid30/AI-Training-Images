@@ -56,19 +56,6 @@ namespace Misc_
                     throw;
                 }
             }
-            if (transform.name != "Front Bumper") return;
-            for (var i = transform.childCount - 1; i > transform.childCount - 10; i--)
-            {
-                try
-                {
-                   // Destroy(transform.GetChild(i).gameObject);
-                }
-                catch (UnityException e)
-                {
-                    print(e + " in object " + transform.name);
-                    throw;
-                }
-            }
         }
     }
 }
