@@ -70,7 +70,7 @@ public class MeshManipulation : UpdateMesh
     
     public override void UpdateBorders()
     {
-        if (Camera.main == null || !updateBorders) return;
+        if (Camera.main == null) return;
 
         FocusOnBounds(GetComponent<MeshRenderer>().bounds);
         
