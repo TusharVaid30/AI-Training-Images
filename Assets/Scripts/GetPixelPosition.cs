@@ -1,5 +1,5 @@
-using System.Globalization;
-using Misc_;
+using JetBrains.Annotations;
+using Mesh_Manipulation;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,17 +13,17 @@ public class GetPixelPosition : MonoBehaviour
     [SerializeField] private Text debugText;
     
     private CoordsPerFrame[] coordsPerFrame;
-
+    
     private int numberOfFrames;
     private readonly int stateNameHash = Animator.StringToHash("Camera Movement");
     private MeshManipulation[] updateMesh;
-    private StoreData[] storeDatas;
+    private StoreData[] dataStorage;
     
     private void Start()
     {
         numberOfFrames = data.numberOfFrames;
         updateMesh = FindObjectsOfType<MeshManipulation>();
-        storeDatas = FindObjectsOfType<StoreData>();
+        dataStorage = FindObjectsOfType<StoreData>();
     }
     
     private void Update()
@@ -49,6 +49,7 @@ public class GetPixelPosition : MonoBehaviour
         debugText.text = info;
     }
     
+    [UsedImplicitly]
     private void Run()
     {
         if (framesDone > numberOfFrames)
@@ -56,7 +57,7 @@ public class GetPixelPosition : MonoBehaviour
             DebugStatus("Writing Data to File");
             return;
         }
-
+        
         framesDone++;
         
         DebugStatus("Capturing Frame " + framesDone);
@@ -65,7 +66,7 @@ public class GetPixelPosition : MonoBehaviour
         foreach (var mesh in updateMesh)
             mesh.UpdateBorders();
 
-        foreach (var storeData in storeDatas)
+        foreach (var storeData in dataStorage)
             storeData.Store(framesDone - 1);
         
     }
