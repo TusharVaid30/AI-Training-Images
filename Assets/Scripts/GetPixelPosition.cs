@@ -1,5 +1,4 @@
-using System.Globalization;
-using Misc_;
+using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,34 +10,19 @@ public class GetPixelPosition : MonoBehaviour
     [SerializeField] private new GameObject camera;
     [SerializeField] private Data data;
     [SerializeField] private Text debugText;
-    [SerializeField] private Transform frontBumper;
-    [SerializeField] private Transform rearBumper;
-    [SerializeField] private Transform rightORVM;
-    [SerializeField] private Transform leftORVM;
-    [SerializeField] private Transform trunk;
-    [SerializeField] private Transform leftTaillight;
-    [SerializeField] private Transform rightTaillight;
-    [SerializeField] private Transform rightHeadlight;
-    [SerializeField] private Transform leftHeadlight;
-    [SerializeField] private Transform hood;
-    [SerializeField] private Transform[] sidePanels;
-    [SerializeField] private Transform[] frontPanels;
-    [SerializeField] private Transform[] backPanels;
     
     private CoordsPerFrame[] coordsPerFrame;
-
-    private const float TIME_TAKEN_PER_FRAME = .5f;
+    
     private int numberOfFrames;
     private readonly int stateNameHash = Animator.StringToHash("Camera Movement");
     private MeshManipulation[] updateMesh;
-    private StoreData[] storeDatas;
-    private int pointIndex;
+    private StoreData[] dataStorage;
     
     private void Start()
     {
         numberOfFrames = data.numberOfFrames;
         updateMesh = FindObjectsOfType<MeshManipulation>();
-        storeDatas = FindObjectsOfType<StoreData>();
+        dataStorage = FindObjectsOfType<StoreData>();
     }
     
     private void Update()
@@ -64,6 +48,7 @@ public class GetPixelPosition : MonoBehaviour
         debugText.text = info;
     }
     
+    [UsedImplicitly]
     private void Run()
     {
         if (framesDone > numberOfFrames)
@@ -71,54 +56,8 @@ public class GetPixelPosition : MonoBehaviour
             DebugStatus("Writing Data to File");
             return;
         }
-
-        if (framesDone < 150)
-        {
-            frontBumper.GetComponent<MeshManipulation>().updateBorders = true;
-            frontBumper.GetComponent<AlignPoints>().align = true;
-        }
-        else if (framesDone is >= 150 and < 300)
-        {
-            rightHeadlight.GetComponent<MeshManipulation>().updateBorders = false;
-
-            foreach (var sidePanel in sidePanels)
-                sidePanel.GetComponent<StoreData>().dontStore = false;
-            foreach (var frontPanel in frontPanels)
-                frontPanel.GetComponent<StoreData>().dontStore = true;
-        }
-        else if (framesDone is >= 300 and < 450)
-        {
-            hood.GetComponent<MeshManipulation>().updateBorders = false;
-            rearBumper.GetComponent<MeshManipulation>().updateBorders = true;
-            rearBumper.GetComponent<AlignPoints>().align = true;
-            rightORVM.GetComponent<MeshManipulation>().updateBorders = false;
-        }
-        else if (framesDone is >= 450 and < 600)
-        {
-            // trunk.GetComponent<MeshManipulation>().updateBorders = true;
-            // trunk.GetComponent<AlignPoints>().align = true;
-            leftTaillight.GetComponent<MeshManipulation>().updateBorders = true;
-            leftTaillight.GetComponent<AlignPoints>().align = true;
-            
-            frontBumper.GetComponent<MeshManipulation>().updateBorders = false;
-            frontBumper.GetComponent<AlignPoints>().align = false;
-            leftHeadlight.GetComponent<MeshManipulation>().updateBorders = false;
-            leftORVM.GetComponent<MeshManipulation>().updateBorders = false;
-        }
-        else if (framesDone >= 600)
-        {
-            rightTaillight.GetComponent<MeshManipulation>().updateBorders = true;
-            rightTaillight.GetComponent<AlignPoints>().align = true;
-            foreach (var bumperSidePanel in sidePanels)
-                bumperSidePanel.GetComponent<StoreData>().dontStore = true;
-
-            foreach (var backPanel in backPanels)
-                backPanel.GetComponent<StoreData>().dontStore = false;
-        }
         
-
         framesDone++;
-        pointIndex++;
         
         DebugStatus("Capturing Frame " + framesDone);
         SetCamPosition();
@@ -126,7 +65,7 @@ public class GetPixelPosition : MonoBehaviour
         foreach (var mesh in updateMesh)
             mesh.UpdateBorders();
 
-        foreach (var storeData in storeDatas)
+        foreach (var storeData in dataStorage)
             storeData.Store(framesDone - 1);
         
     }

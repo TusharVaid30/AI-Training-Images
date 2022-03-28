@@ -1,9 +1,8 @@
-using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using UnityEngine;
 
-namespace Misc_
+namespace Misc
 {
     public class AlignPoints : MonoBehaviour
     {
@@ -20,6 +19,7 @@ namespace Misc_
         {
             Transform tMin = null;
             var minDist = Mathf.Infinity;
+            if (Camera.main == null) return null;
             var currentPos = Camera.main.WorldToScreenPoint(currentObj.position);
             foreach (var t in enemies)
             {
@@ -28,6 +28,7 @@ namespace Misc_
                 tMin = t;
                 minDist = dist;
             }
+
             return tMin;
         }
 
@@ -41,34 +42,15 @@ namespace Misc_
                 points.Remove(transform.GetChild(i));
                 var next = GetClosestObject(transform.GetChild(i), points);
                 if (i < transform.childCount - 1)
+                {
                     next.SetSiblingIndex(i + 1);
-            }
-            if (transform.childCount < 5) return;
-            for (var i = transform.childCount - 1; i > transform.childCount - 5; i--)
-            {
-                try
-                { 
-                    Destroy(transform.GetChild(i).gameObject);
-                }
-                catch (UnityException e)
-                {
-                    print(e + " in object " + transform.name);
-                    throw;
+                    next.name = i.ToString();
                 }
             }
-            if (transform.name != "Front Bumper") return;
-            for (var i = transform.childCount - 1; i > transform.childCount - 5; i--)
-            {
-                try
-                {
-                    Destroy(transform.GetChild(i).gameObject);
-                }
-                catch (UnityException e)
-                {
-                    print(e + " in object " + transform.name);
-                    throw;
-                }
-            }
+            
+            if (transform.childCount == 0) return;
+            for (var i = transform.childCount - 1; i > transform.childCount - 20; i--)
+                Destroy(transform.GetChild(i).gameObject);
         }
     }
 }
