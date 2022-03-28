@@ -41,32 +41,9 @@ namespace Misc_
                 points.Remove(transform.GetChild(i));
                 var next = GetClosestObject(transform.GetChild(i), points);
                 if (i < transform.childCount - 1)
+                {
                     next.SetSiblingIndex(i + 1);
-            }
-            if (transform.childCount < 5) return;
-            for (var i = transform.childCount - 1; i > transform.childCount - 5; i--)
-            {
-                try
-                { 
-                    Destroy(transform.GetChild(i).gameObject);
-                }
-                catch (UnityException e)
-                {
-                    print(e + " in object " + transform.name);
-                    throw;
-                }
-            }
-            if (transform.name != "Front Bumper") return;
-            for (var i = transform.childCount - 1; i > transform.childCount - 5; i--)
-            {
-                try
-                {
-                    Destroy(transform.GetChild(i).gameObject);
-                }
-                catch (UnityException e)
-                {
-                    print(e + " in object " + transform.name);
-                    throw;
+                    next.name = i.ToString();
                 }
             }
         }
