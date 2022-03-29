@@ -723,7 +723,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a672c74ea17b2b34b93bbd6f6e2caf75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dontStore: 1
+  dontStore: 0
 --- !u!114 &357605524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2962,7 +2962,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a672c74ea17b2b34b93bbd6f6e2caf75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dontStore: 1
+  dontStore: 0
 --- !u!64 &1530338458
 MeshCollider:
   m_ObjectHideFlags: 0
