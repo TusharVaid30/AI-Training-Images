@@ -202,6 +202,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   align: 1
+--- !u!4 &34306431 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7221558941575401237, guid: d28e849141d7bc942862672e47ef7369, type: 3}
+  m_PrefabInstance: {fileID: 393830359}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &81749144
 GameObject:
   m_ObjectHideFlags: 0
@@ -447,6 +452,11 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 3173294143564873784, guid: 8681853149216a641ab07ff8155610c3, type: 3}
+--- !u!4 &142657862 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8681853149216a641ab07ff8155610c3, type: 3}
+  m_PrefabInstance: {fileID: 142657850}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &242860291
 GameObject:
   m_ObjectHideFlags: 0
@@ -835,6 +845,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   align: 1
+--- !u!4 &366208146 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: eb13d5dab2bac154eb6c2e943a242b77, type: 3}
+  m_PrefabInstance: {fileID: 366208138}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &393830359
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -987,6 +1002,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   align: 1
+--- !u!4 &393830366 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2681404328570014205, guid: d28e849141d7bc942862672e47ef7369, type: 3}
+  m_PrefabInstance: {fileID: 393830359}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &559832609
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1075,8 +1095,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   sphere: {fileID: 4741621872317803424, guid: 956ac2e0e505c49409d63ec8b1d6e347, type: 3}
-  factorX: 5
-  factorY: 5
+  factorX: 3
+  factorY: 3
   resX: 1920
   resY: 1080
   colliders: []
@@ -1445,6 +1465,11 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 7804447597007823120, guid: 56795b307ea23a247b373b03e3e93059, type: 3}
+--- !u!4 &859965638 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 56795b307ea23a247b373b03e3e93059, type: 3}
+  m_PrefabInstance: {fileID: 859965626}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &868740213
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1656,6 +1681,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   align: 1
+--- !u!4 &954470122 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3efbb66f1488d4a4894fae48631d20ff, type: 3}
+  m_PrefabInstance: {fileID: 954470114}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1033684473
 GameObject:
   m_ObjectHideFlags: 0
@@ -1769,7 +1799,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 11.649013, y: 15.120363, z: -0.00028080557}
+  m_LocalEulerAnglesHint: {x: 18.323757, y: -60.866203, z: -0.0002734104}
 --- !u!114 &1047038093
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1788,20 +1818,20 @@ MonoBehaviour:
   debugText: {fileID: 1033684475}
   panels:
   - {fileID: 559832610}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 4307075454003257685}
+  - {fileID: 5775678377582317169}
   - {fileID: 7652418020515514356}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 366208146}
+  - {fileID: 2201156766641193121}
+  - {fileID: 2612859005679659443}
+  - {fileID: 142657862}
+  - {fileID: 2474082920383404155}
+  - {fileID: 393830366}
+  - {fileID: 34306431}
   - {fileID: 863263284421376397}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 859965638}
+  - {fileID: 954470122}
+  - {fileID: 1258131192}
   - {fileID: 6261297711656588188}
   - {fileID: 1056592689}
   - {fileID: 8362726251616172367}
@@ -1816,6 +1846,10 @@ MonoBehaviour:
   - {fileID: 331808596891495062}
   - {fileID: 543450652385855743}
   - {fileID: 543450651646834313}
+  - {fileID: 116721710144766814}
+  - {fileID: 7074796814804600153}
+  - {fileID: 2049279013}
+  - {fileID: 1719379648}
 --- !u!114 &1047038094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2210,7 +2244,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bec5d0b1d74864e40a16ce366d815f39, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.960904
+      value: 11.934
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bec5d0b1d74864e40a16ce366d815f39, type: 3}
       propertyPath: m_LocalPosition.y
@@ -7497,8 +7531,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   sphere: {fileID: 4741621872317803424, guid: 956ac2e0e505c49409d63ec8b1d6e347, type: 3}
-  factorX: 5
-  factorY: 5
+  factorX: 2
+  factorY: 2
   resX: 1920
   resY: 1080
   colliders: []
@@ -8358,8 +8392,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 704
   sphere: {fileID: 4741621872317803424, guid: 956ac2e0e505c49409d63ec8b1d6e347, type: 3}
-  factorX: 5
-  factorY: 5
+  factorX: 2
+  factorY: 2
   resX: 1920
   resY: 1080
   colliders: []
@@ -8619,8 +8653,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   sphere: {fileID: 4741621872317803424, guid: 956ac2e0e505c49409d63ec8b1d6e347, type: 3}
-  factorX: 5
-  factorY: 5
+  factorX: 2
+  factorY: 2
   resX: 1920
   resY: 1080
   colliders: []
@@ -8860,8 +8894,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 704
   sphere: {fileID: 4741621872317803424, guid: 956ac2e0e505c49409d63ec8b1d6e347, type: 3}
-  factorX: 5
-  factorY: 5
+  factorX: 2
+  factorY: 2
   resX: 1920
   resY: 1080
   colliders: []
