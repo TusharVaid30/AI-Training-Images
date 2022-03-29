@@ -38,16 +38,13 @@ public class StoreData : MonoBehaviour
         //         print(position);
         // } = positions;
         
-        if (transform.name == "Rear Bumper")
-            print("XXXXXXXXXXXXXXXXXXXXX");
         StartCoroutine(Delay());        
     }
 
     private IEnumerator Delay()
     {
         yield return new WaitForSeconds(.2f);
-        if (transform.CompareTag("AUTOMESH"))
-            for (var i = 0; i < transform.childCount; i++)
-                Destroy(transform.GetChild(i).gameObject);  
+        for (var i = 0; i < transform.childCount; i++)
+            Destroy(transform.GetChild(i).gameObject);
     }
 }

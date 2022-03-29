@@ -2386,7 +2386,7 @@ GameObject:
   - component: {fileID: 924404529}
   m_Layer: 0
   m_Name: rim
-  m_TagString: Untagged
+  m_TagString: AUTOMESH
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
