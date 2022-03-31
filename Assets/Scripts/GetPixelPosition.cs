@@ -37,7 +37,7 @@ public class GetPixelPosition : MonoBehaviour
 
     private void SetCamPosition()
     {
-        var camTransform = cameraPosition.transform;
+        Transform camTransform = cameraPosition.transform;
         camera.transform.position = camTransform.position;
         camera.transform.rotation = camTransform.rotation;
     }
@@ -62,10 +62,10 @@ public class GetPixelPosition : MonoBehaviour
         DebugStatus("Capturing Frame " + framesDone);
         SetCamPosition();
         
-        foreach (var mesh in updateMesh)
+        foreach (MeshManipulation mesh in updateMesh)
             mesh.UpdateBorders();
 
-        foreach (var storeData in dataStorage)
+        foreach (StoreData storeData in dataStorage)
             storeData.Store(framesDone - 1);
         
     }

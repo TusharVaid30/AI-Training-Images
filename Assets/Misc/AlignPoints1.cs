@@ -20,11 +20,11 @@ namespace Misc_
         private static Transform GetClosestObject(Transform currentObj, IEnumerable<Transform> enemies)
         {
             Transform tMin = null;
-            var minDist = Mathf.Infinity;
-            var currentPos = currentObj.position;
-            foreach (var t in enemies)
+            float minDist = Mathf.Infinity;
+            Vector3 currentPos = currentObj.position;
+            foreach (Transform t in enemies)
             {
-                var dist = Vector3.Distance( t.position, currentPos);
+                float dist = Vector3.Distance( t.position, currentPos);
                 if (!(dist < minDist)) continue;
                 tMin = t;
                 minDist = dist;
@@ -35,12 +35,12 @@ namespace Misc_
         public void Start()
         {
             if (!align) return;
-            for (var i = 0; i < transform.childCount; i++)
+            for (int i = 0; i < transform.childCount; i++)
                 points.Add(transform.GetChild(i));
-            for (var i = 0; i < transform.childCount; i++)
+            for (int i = 0; i < transform.childCount; i++)
             {
                 points.Remove(transform.GetChild(i));
-                var next = GetClosestObject(transform.GetChild(i), points);
+                Transform next = GetClosestObject(transform.GetChild(i), points);
                 if (i < transform.childCount - 1)
                     next.SetSiblingIndex(i + 1);
             }

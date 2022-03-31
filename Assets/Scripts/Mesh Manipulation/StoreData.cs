@@ -21,12 +21,12 @@ public class StoreData : MonoBehaviour
     {
         if (dontStore) return;
         if (transform.childCount == 0) return;
-        var positions = new Vector2[transform.childCount];
+        Vector2[] positions = new Vector2[transform.childCount];
         if (Camera.main == null) return;
-        for (var i = 0; i < transform.childCount; i++)
+        for (int i = 0; i < transform.childCount; i++)
         {
-            var position = Camera.main.WorldToScreenPoint(transform.GetChild(i).position);
-            var screenPos = new Vector2(position.x, 1080 - position.y);
+            Vector3 position = Camera.main.WorldToScreenPoint(transform.GetChild(i).position);
+            Vector2 screenPos = new Vector2(position.x, 1080 - position.y);
             positions[i] = screenPos;
         }
 
@@ -43,7 +43,7 @@ public class StoreData : MonoBehaviour
     private IEnumerator Delay()
     {
         yield return new WaitForSeconds(.2f);
-        for (var i = 0; i < transform.childCount; i++)
+        for (int i = 0; i < transform.childCount; i++)
             Destroy(transform.GetChild(i).gameObject);
     }
 }

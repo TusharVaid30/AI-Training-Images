@@ -18,12 +18,12 @@ namespace Misc
         private static Transform GetClosestObject(Transform currentObj, IEnumerable<Transform> enemies)
         {
             Transform tMin = null;
-            var minDist = Mathf.Infinity;
+            float minDist = Mathf.Infinity;
             if (Camera.main == null) return null;
-            var currentPos = Camera.main.WorldToScreenPoint(currentObj.position);
-            foreach (var t in enemies)
+            Vector3 currentPos = Camera.main.WorldToScreenPoint(currentObj.position);
+            foreach (Transform t in enemies)
             {
-                var dist = Vector3.Distance( Camera.main.WorldToScreenPoint(t.position), currentPos);
+                float dist = Vector3.Distance( Camera.main.WorldToScreenPoint(t.position), currentPos);
                 if (!(dist < minDist)) continue;
                 tMin = t;
                 minDist = dist;
@@ -35,12 +35,12 @@ namespace Misc
         public void Align()
         {
             if (!align) return;
-            for (var i = 0; i < transform.childCount; i++)
+            for (int i = 0; i < transform.childCount; i++)
                 points.Add(transform.GetChild(i));
-            for (var i = 0; i < transform.childCount; i++)
+            for (int i = 0; i < transform.childCount; i++)
             {
                 points.Remove(transform.GetChild(i));
-                var next = GetClosestObject(transform.GetChild(i), points);
+                Transform next = GetClosestObject(transform.GetChild(i), points);
                 if (i < transform.childCount - 1)
                 {
                     next.SetSiblingIndex(i + 1);
@@ -49,7 +49,7 @@ namespace Misc
             }
             
             if (transform.childCount < 50) return;
-            for (var i = transform.childCount - 1; i > transform.childCount - 20; i--)
+            for (int i = transform.childCount - 1; i > transform.childCount - 20; i--)
                 Destroy(transform.GetChild(i).gameObject);
         }
     }

@@ -41,7 +41,7 @@ public class WriteImageData : MonoBehaviour
 
     private void SetupData()
     {
-        for (var i = 0; i <= data.numberOfFrames - 1; i++)
+        for (int i = 0; i <= data.numberOfFrames - 1; i++)
         {
             path = data.path + "_" + (i + 1) + ".png.json";
             OpenFile();
@@ -72,7 +72,7 @@ public class WriteImageData : MonoBehaviour
             WriteStringLine("     \"annotations\":" + " [");
 
 
-            for (var x = 0; x < panels.Length; x++)
+            for (int x = 0; x < panels.Length; x++)
             {
                 if (panels[x].GetComponent<FramesAndCoords>().data.ContainsKey(i))
                 {
@@ -82,10 +82,10 @@ public class WriteImageData : MonoBehaviour
 
                     WriteStringLine("           \"bbox\": [");
 
-                    var bboxX = new List<float>();
-                    var bboxY = new List<float>();
+                    List<float> bboxX = new List<float>();
+                    List<float> bboxY = new List<float>();
 
-                    for (var z = 0; z < panels[x].GetComponent<FramesAndCoords>().data[i].Length; z++)
+                    for (int z = 0; z < panels[x].GetComponent<FramesAndCoords>().data[i].Length; z++)
                     {
                         bboxX.Add(panels[x].GetComponent<FramesAndCoords>().data[i][z].x);
                         bboxY.Add(panels[x].GetComponent<FramesAndCoords>().data[i][z].y);
@@ -99,7 +99,7 @@ public class WriteImageData : MonoBehaviour
                     WriteStringLine("           ],");
                     WriteStringLine("          \"segmentation\" : [");
                     WriteStringLine("           [");
-                    for (var j = 0; j < panels[x].GetComponent<FramesAndCoords>().data[i].Length; j++)
+                    for (int j = 0; j < panels[x].GetComponent<FramesAndCoords>().data[i].Length; j++)
                     {
                         WriteString("                       " +
                                     panels[x].GetComponent<FramesAndCoords>().data[i][j].x + ", " +
@@ -126,7 +126,7 @@ public class WriteImageData : MonoBehaviour
             }
 
             writer.Close();
-            var fileStream = new FileStream(path, FileMode.Open, FileAccess.ReadWrite);
+            FileStream fileStream = new FileStream(path, FileMode.Open, FileAccess.ReadWrite);
             fileStream.SetLength(fileStream.Length - 1);
             fileStream.Close();
             OpenFile();

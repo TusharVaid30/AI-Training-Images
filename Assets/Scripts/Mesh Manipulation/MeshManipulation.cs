@@ -50,12 +50,12 @@ public class MeshManipulation : UpdateMesh
             new Vector3( c.x - e.x, c.y - e.y, c.z - e.z )
         };
  
-        var screenCorners = worldCorners.Select(corner => Camera.main.WorldToScreenPoint(corner));
-        var enumerable = screenCorners as Vector3[] ?? screenCorners.ToArray();
-        var maxX = enumerable.Max(corner => corner.x);
-        var minX = enumerable.Min(corner => corner.x);
-        var maxY = enumerable.Max(corner => corner.y);
-        var minY = enumerable.Min(corner => corner.y);
+        IEnumerable<Vector3> screenCorners = worldCorners.Select(corner => Camera.main.WorldToScreenPoint(corner));
+        Vector3[] enumerable = screenCorners as Vector3[] ?? screenCorners.ToArray();
+        float maxX = enumerable.Max(corner => corner.x);
+        float minX = enumerable.Min(corner => corner.x);
+        float maxY = enumerable.Max(corner => corner.y);
+        float minY = enumerable.Min(corner => corner.y);
 
         maxX = Mathf.Clamp(maxX, 0, resX);
         minX = Mathf.Clamp(minX, 0, resX);
@@ -77,16 +77,16 @@ public class MeshManipulation : UpdateMesh
         if (transform.name == "right_fog_light")
             print(transform.name);
 
-        for (var x = (int) bottomLeft.x; x < topRight.x; x += factorX)
+        for (int x = (int) bottomLeft.x; x < topRight.x; x += factorX)
         {
-            for (var y = (int) bottomLeft.y; y < topRight.y; y += factorY)
+            for (int y = (int) bottomLeft.y; y < topRight.y; y += factorY)
             {
-                var ray = Camera.main.ScreenPointToRay(new Vector2(x, y));
+                Ray ray = Camera.main.ScreenPointToRay(new Vector2(x, y));
         
                 RaycastHit hit;
                 if (Physics.Raycast(ray, out hit, Mathf.Infinity, ~ignore))
                 {
-                    if ((hit.transform.CompareTag("Front Bumper") && transform.name == "Front Bumper") || hit.transform == transform)
+                    if (hit.transform == transform)
                     {
                         if (!hitPoints1.Contains(y))
                         {
@@ -109,11 +109,11 @@ public class MeshManipulation : UpdateMesh
             }
         }
         
-        for (var y = (int) bottomLeft.y; y < topRight.y; y += factorY)
+        for (int y = (int) bottomLeft.y; y < topRight.y; y += factorY)
         {
-            for (var x = (int) bottomLeft.x; x < topRight.x; x += factorX)
+            for (int x = (int) bottomLeft.x; x < topRight.x; x += factorX)
             {
-                var ray = Camera.main.ScreenPointToRay(new Vector2(x, y));
+                Ray ray = Camera.main.ScreenPointToRay(new Vector2(x, y));
         
                 RaycastHit hit;
                 if (Physics.Raycast(ray, out hit, Mathf.Infinity, ~ignore))
@@ -140,11 +140,11 @@ public class MeshManipulation : UpdateMesh
             }
         }
         
-        for (var x = (int) topRight.x; x > bottomLeft.x; x -= factorX)
+        for (int x = (int) topRight.x; x > bottomLeft.x; x -= factorX)
         {
-            for (var y = (int) topRight.y; y > bottomLeft.y; y -= factorY)
+            for (int y = (int) topRight.y; y > bottomLeft.y; y -= factorY)
             {
-                var ray = Camera.main.ScreenPointToRay(new Vector2(x, y));
+                Ray ray = Camera.main.ScreenPointToRay(new Vector2(x, y));
         
                 RaycastHit hit;
                 if (Physics.Raycast(ray, out hit, Mathf.Infinity, ~ignore))
@@ -171,11 +171,11 @@ public class MeshManipulation : UpdateMesh
             }
         }
         
-        for (var y = (int) topRight.y; y > bottomLeft.y; y -= factorY)
+        for (int y = (int) topRight.y; y > bottomLeft.y; y -= factorY)
         {
-            for (var x = (int) topRight.x; x > bottomLeft.x; x -= factorX)
+            for (int x = (int) topRight.x; x > bottomLeft.x; x -= factorX)
             {
-                var ray = Camera.main.ScreenPointToRay(new Vector2(x, y));
+                Ray ray = Camera.main.ScreenPointToRay(new Vector2(x, y));
         
                 RaycastHit hit;
                 if (Physics.Raycast(ray, out hit, Mathf.Infinity, ~ignore))
