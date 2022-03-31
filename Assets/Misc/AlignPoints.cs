@@ -47,8 +47,8 @@ namespace Misc
                     next.name = i.ToString();
                 }
             }
-            
-            if (transform.childCount == 0) return;
+
+            if (transform.childCount < 40) return;
             for (var i = transform.childCount - 1; i > transform.childCount - 20; i--)
                 Destroy(transform.GetChild(i).gameObject);
         }
