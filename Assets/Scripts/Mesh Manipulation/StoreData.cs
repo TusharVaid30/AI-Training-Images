@@ -36,7 +36,6 @@ namespace Mesh_Manipulation
         private IEnumerator Delay()
         {
             yield return new WaitForSeconds(.2f);
-            if (!transform.CompareTag("AUTOMESH")) yield break;
             for (var i = 0; i < transform.childCount; i++)
                 Destroy(transform.GetChild(i).gameObject);
         }
