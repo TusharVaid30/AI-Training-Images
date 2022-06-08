@@ -10,6 +10,7 @@ public class GetPixelPosition : MonoBehaviour
     [SerializeField] private new GameObject camera;
     [SerializeField] private Data data;
     [SerializeField] private Text debugText;
+    [SerializeField] private StoreData[] storeDatas;
     
     private CoordsPerFrame[] coordsPerFrame;
     
@@ -62,8 +63,14 @@ public class GetPixelPosition : MonoBehaviour
         DebugStatus("Capturing Frame " + framesDone);
         SetCamPosition();
         
-        foreach (var mesh in updateMesh)
-            mesh.UpdateBorders();
+        // foreach (var mesh in updateMesh)
+        //     mesh.UpdateBorders();
+
+        if (framesDone > 600)
+        {
+            storeDatas[0].dontStore = false;
+            storeDatas[1].dontStore = false;
+        }
 
         foreach (var storeData in dataStorage)
             storeData.Store(framesDone - 1);

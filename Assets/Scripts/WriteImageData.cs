@@ -84,13 +84,13 @@ public class WriteImageData : MonoBehaviour
 
                     var bboxX = new List<float>();
                     var bboxY = new List<float>();
-
-                    for (var z = 0; z < panels[x].GetComponent<FramesAndCoords>().data[i].Length; z++)
+                    
+                    for (var z = 0; z < panels[x].GetComponent<FramesAndCoords>().data[i].Length - 1; z++)
                     {
                         bboxX.Add(panels[x].GetComponent<FramesAndCoords>().data[i][z].x);
                         bboxY.Add(panels[x].GetComponent<FramesAndCoords>().data[i][z].y);
                     }
-
+                    
                     WriteStringLine("           " + Mathf.Min(bboxX.ToArray()) + ",");
                     WriteStringLine("           " + Mathf.Min(bboxY.ToArray()) + ",");
                     WriteStringLine("           " + (Mathf.Max(bboxX.ToArray()) - Mathf.Min(bboxX.ToArray())) +
@@ -112,7 +112,7 @@ public class WriteImageData : MonoBehaviour
                     WriteStringLine("            ]");
                     WriteStringLine("        ],");
                     WriteStringLine("           \"category_name\":" + "\"" + panels[x].name + "\" ,");
-                    WriteStringLine("           \"id\":" + annID + ",");
+                    WriteStringLine("           \"id\":" + annID);
                     WriteStringLine("           \"area\":" +
                                     (Mathf.Max(bboxX.ToArray()) - Mathf.Min(bboxX.ToArray())) *
                                     (Mathf.Max(bboxY.ToArray()) - Mathf.Min(bboxY.ToArray())));
