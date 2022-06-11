@@ -37,7 +37,7 @@ public class StoreData : MonoBehaviour
         //     if (transform.name == "Grill" && position.x > 1500f)
         //         print(position);
         // } = positions;
-        //StartCoroutine(Delay());        
+        StartCoroutine(Delay());        
     }
 
     private IEnumerator Delay()

@@ -63,8 +63,8 @@ public class GetPixelPosition : MonoBehaviour
         DebugStatus("Capturing Frame " + framesDone);
         SetCamPosition();
         
-        // foreach (var mesh in updateMesh)
-        //     mesh.UpdateBorders();
+        foreach (var mesh in updateMesh)
+            mesh.UpdateBorders();
 
         if (framesDone > 600)
         {
