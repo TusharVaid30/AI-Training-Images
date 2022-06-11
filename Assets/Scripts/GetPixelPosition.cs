@@ -18,12 +18,14 @@ public class GetPixelPosition : MonoBehaviour
     private readonly int stateNameHash = Animator.StringToHash("Camera Movement");
     private MeshManipulation[] updateMesh;
     private StoreData[] dataStorage;
+    private FixBumperEdge[] fixEdge;
     
     private void Start()
     {
         numberOfFrames = data.numberOfFrames;
         updateMesh = FindObjectsOfType<MeshManipulation>();
         dataStorage = FindObjectsOfType<StoreData>();
+        fixEdge = FindObjectsOfType<FixBumperEdge>();
     }
     
     private void Update()
@@ -66,11 +68,17 @@ public class GetPixelPosition : MonoBehaviour
         // foreach (var mesh in updateMesh)
         //     mesh.UpdateBorders();
 
-        if (framesDone > 600)
-        {
-            storeDatas[0].dontStore = false;
-            storeDatas[1].dontStore = false;
-        }
+        foreach (var fixBumperEdge in fixEdge)
+            fixBumperEdge.CheckInView();
+
+        if (framesDone == 4)
+            Time.timeScale = 0f;
+        
+        // if (framesDone > 600)
+        // {
+        //     storeDatas[0].dontStore = false;
+        //     storeDatas[1].dontStore = false;
+        // }
 
         foreach (var storeData in dataStorage)
             storeData.Store(framesDone - 1);

@@ -103,7 +103,7 @@ public class WriteImageData : MonoBehaviour
                     {
                         WriteString("                       " +
                                     panels[x].GetComponent<FramesAndCoords>().data[i][j].x + ", " +
-                                    panels[x].GetComponent<FramesAndCoords>().data[i][j].y);
+                                    panels[x].GetComponent<FramesAndCoords>().data[i][j].y + ", " + panels[x].GetComponent<FramesAndCoords>().visibility[i][j]);
 
                         WriteStringLine(
                             j == panels[x].GetComponent<FramesAndCoords>().data[i].Length - 1 ? "" : ",");

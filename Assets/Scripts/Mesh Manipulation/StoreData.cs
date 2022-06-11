@@ -21,17 +21,21 @@ public class StoreData : MonoBehaviour
     {
         if (dontStore) return;
         if (transform.childCount == 0) return;
-        var positions = new Vector2[transform.childCount];
+        var childCount = transform.childCount;
+        var positions = new Vector2[childCount];
+        var vis = new int[childCount];
         if (Camera.main == null) return;
         for (var i = 0; i < transform.childCount; i++)
         {
             var position = Camera.main.WorldToScreenPoint(transform.GetChild(i).position);
             var screenPos = new Vector2(position.x, 1080 - position.y);
             positions[i] = screenPos;
+            vis[i] = transform.GetChild(i).GetComponent<CheckVIew>().CheckInView();
         }
 
         framesAndCoords.data.Add(frame, positions);
-        
+        framesAndCoords.visibility.Add(frame, vis);
+
         // foreach (var position in positions)
         // {
         //     if (transform.name == "Grill" && position.x > 1500f)
