@@ -5,7 +5,6 @@ using Misc_;
 using UnityEditor;
 using UnityEngine;
 
-[RequireComponent(typeof(AlignPoints), typeof(StoreData), typeof(FramesAndCoords))]
 public class MeshManipulation : UpdateMesh
 {
     public bool updateBorders = true;

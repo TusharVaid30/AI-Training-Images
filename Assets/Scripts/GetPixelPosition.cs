@@ -70,9 +70,6 @@ public class GetPixelPosition : MonoBehaviour
 
         foreach (var fixBumperEdge in fixEdge)
             fixBumperEdge.CheckInView();
-
-        if (framesDone == 4)
-            Time.timeScale = 0f;
         
         // if (framesDone > 600)
         // {
